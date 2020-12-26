@@ -94,6 +94,10 @@ p {
 
 /* food section starts */
 
+.food-section {
+    padding: 50px 0 100px 0;
+}
+
 .item-container {
     margin-bottom: 20px;
 }
@@ -115,19 +119,20 @@ p {
 }
 
 .food-info h3 {
-    font-size: 30px;
+    font-size: 21px;
     color: var(--theme-color);
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
 
 .food-info p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 28px;
-    margin-top: 16px;
+    /* margin-top: 16px; */
     margin-bottom: 6px;
     color: #6e6e6e;
+    line-height: 1.4;
 }
 
 .food-cta,
@@ -139,17 +144,29 @@ p {
 .menu-cta a {
     background: var(--theme-color);
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 12px;
     font-weight: 600;
     border-radius: 5px;
     text-align: center;
     transition: .3s linear all;
+    font-size: 13px;
+}
+
+.food-info .price {
+    color: var(--theme-color);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .food-cta a:hover {
     background: var(--hover-color);
     text-decoration: none;
 }
+
+
+/* .margin-bottom {
+    margin-bottom: 50px;
+} */
 
 
 /* food section ends */
@@ -279,14 +296,9 @@ tbody tr:nth-child(odd) {
     width: 80%;
     z-index: -1;
     bottom: 94px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s linear all;
-}
-
-.popup-show {
     opacity: 1;
     visibility: visible;
+    transition: .3s linear all;
 }
 
 .pop-up-title {

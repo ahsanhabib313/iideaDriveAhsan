@@ -1,9 +1,4 @@
 (function($) {
-    // ORDER POPUP
-    $('#d-order').on('click', function() {
-        $('#show-popup').toggleClass('popup-show');
-    })
-
 
     // FOR PRODUCT CARD SLIDER
     $('.food-slider').slick({
@@ -12,8 +7,6 @@
         autoplay: true,
         arrows: false,
         speed: 200,
-        // prevArrow: '<i class="fas fa-long-arrow-alt-right dandik"></i>',
-        // nextArrow: '<i class="fas fa-long-arrow-alt-left bamdik"></i>',
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [{
