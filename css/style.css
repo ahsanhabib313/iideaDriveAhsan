@@ -211,6 +211,15 @@ p {
     border: 10px solid #fff;
 }
 
+.page-item.active .page-link {
+    background: var(--theme-color);
+    border: none;
+}
+
+.page-link {
+    color: #000;
+}
+
 
 /* menu page ends */
 
