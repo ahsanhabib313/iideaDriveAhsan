@@ -1,5 +1,4 @@
 (function($) {
-
     // FOR PRODUCT CARD SLIDER
     $('.food-slider').slick({
         dots: false,
@@ -41,4 +40,13 @@
             }
         ]
     });
+
+    const foodCta = document.querySelector('#food-cta button');
+    const price = document.querySelector('#price').textContent;
+    const update = document.querySelector('#update li span');
+
+    foodCta.addEventListener('click', function() {
+        update.textContent = price
+    });
+
 })(jQuery);

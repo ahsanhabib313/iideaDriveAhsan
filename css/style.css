@@ -148,7 +148,7 @@ p {
     margin-top: 20px;
 }
 
-.food-cta a,
+.food-cta button,
 .menu-cta a {
     background: var(--theme-color);
     color: #fff;
@@ -158,6 +158,7 @@ p {
     text-align: center;
     transition: .3s linear all;
     font-size: 13px;
+    border: none;
 }
 
 .food-info .price {
@@ -282,7 +283,7 @@ tbody tr:nth-child(odd) {
 
 /* footer starts */
 
-.footer-componment {
+.footer-component {
     display: block;
 }
 
