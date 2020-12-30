@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 02</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-  </head>
+@extends('client.layout.clientPortal')
+@section('content')
 
   <body>
     <div class="container">
@@ -44,8 +32,8 @@
           </div>
           <div class="col-lg-3">
             <div class="logo d-flex justify-content-end">
-              <a href="index.html">
-                <img src="images/iideadrive.png" alt="logo">
+              <a href="index.php">
+                <img src="{{ asset('frontend_assets') }}/images/iideadrive.png" alt="logo">
               </a>
             </div>
           </div>
@@ -63,7 +51,7 @@
                 <div class="row">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-1.jpg" alt="burger">
+                      <img src="{{ asset('frontend_assets') }}/images/food-1.jpg" alt="burger">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -84,7 +72,7 @@
                 <div class="row ">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-2.jpg" alt="pizza">
+                      <img src="{{ asset('frontend_assets') }}/images/food-2.jpg" alt="pizza">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -108,7 +96,7 @@
                 <div class="row ">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-3.jpg" alt="sandwich">
+                      <img src="{{ asset('frontend_assets') }}/images/food-3.jpg" alt="sandwich">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -130,7 +118,7 @@
                 <div class="row ">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-4.jpg" alt="smoothie">
+                      <img src="{{ asset('frontend_assets') }}/images/food-4.jpg" alt="smoothie">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -154,7 +142,7 @@
                 <div class="row ">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-5.jpg" alt="fries">
+                      <img src="{{ asset('frontend_assets') }}/images/food-5.jpg" alt="fries">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -175,7 +163,7 @@
                 <div class="row ">
                   <div class="col-lg-7">
                     <div class="food-img">
-                      <img src="images/food-6.jpg" alt="chicken">
+                      <img src="{{ asset('frontend_assets') }}/images/food-6.jpg" alt="chicken">
                     </div>
                   </div>
                   <div class="col-lg-5">
@@ -209,57 +197,57 @@
               <div class="row food-slider">
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-10.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-10.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-8.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-8.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-9.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-9.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-11.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-11.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-6.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-6.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-12.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-12.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-2.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-2.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="food-img ">
-                    <a href="menu.html">
-                      <img src="images/food-3.jpg" alt="burger" class="no-border-radius">
+                    <a href="cart.php">
+                      <img src="{{ asset('frontend_assets') }}/images/food-3.jpg" alt="burger" class="no-border-radius">
                     </a>
                   </div>
                 </div>
@@ -286,12 +274,4 @@
       </div>
     </div>
     <!--footer componment ends  -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fontawesome.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-
-</html>
+@endsection

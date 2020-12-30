@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('client.index');
 });
-Route::get('menu.php', function () {
-    return view('menu');
+Route::get('/menu', function () {
+    return view('client.menu');
 });
-Route::get('cart.php', function () {
-    return view('cart');
+Route::get('/cart', function () {
+    return view('client.cart');
 });
-Route::get('login.php', function () {
-    return view('login');
+Route::get('/login', function () {
+    return view('client.login');
 });
-Route::get('driverLogin.php', function () {
-    return view('driverLogin');
+Route::get('/clientLogin', function () {
+    return view('client.clientLogin');
 });

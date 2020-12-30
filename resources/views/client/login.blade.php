@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('client.layout.clientPortal')
+@section('content')
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 02</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-  </head>
 
   <body>
     <div class="container-scroller">
@@ -60,12 +49,4 @@
       <!-- page-body-wrapper ends -->
     </div>
     <!--footer componment ends  -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fontawesome.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-
-</html>
+@endsection

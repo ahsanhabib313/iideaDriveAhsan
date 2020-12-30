@@ -1,8 +1,8 @@
-@extends('inc.layout')
+@extends('client.layout.clientPortal')
 @section('content')
     <body>
     <div class="homepage">
-      <a href="menu.php">
+      <a href="\menu">
         <i class="fas fa-arrow-left"></i>
       </a>
     </div>
@@ -50,28 +50,28 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-1.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-2.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6  col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-3.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6  col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-4.jpg" alt="burger">
                 </a>
               </div>
@@ -80,28 +80,28 @@
           <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-5.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-6.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 ">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-10.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-2.jpg" alt="burger">
                 </a>
               </div>
@@ -110,28 +110,28 @@
           <div class="row ">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-9.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-1.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 ">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-11.jpg" alt="burger">
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 ">
               <div class="menu-img">
-                <a href="menu.php">
+                <a href="\menu">
                   <img src="{{asset('frontend_assets/')}}/images/food-3.jpg" alt="burger">
                 </a>
               </div>

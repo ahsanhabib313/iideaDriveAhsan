@@ -1,4 +1,4 @@
-@extends('inc.layout')
+@extends('client.layout.clientPortal')
 @section('content')
     <body>
    <div class="login-wrapper">
