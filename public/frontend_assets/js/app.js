@@ -43,8 +43,7 @@
 
     const foodCta = document.getElementsByClassName('food-order-btn');
     const price = document.querySelectorAll('.price');
-    const update = document.querySelector('#update li span');
-    console.log(price);
+    const update = document.querySelector('#update li span');;
     for (var i = 0; i < foodCta.length; i++) {
         let btn = foodCta[i];
 
@@ -71,11 +70,8 @@
     let evalResult;
     let lastOperator = false;
     const primaryRender = (value) => {
-            primaryDisplay.innerText = value;
-        }
-        /*const btns = document.getElementById("btn");
-        const primaryDisplay = document.getElementById("display");
-        const secondaryDisplay = document.getElementById("secondary-display");*/
+        primaryDisplay.innerText = value;
+    }
     const secondaryRender = (value) => {
         secondaryDisplay.innerText = value;
     }
@@ -87,11 +83,7 @@
         if (width > 310) {
             secondaryDisplay.style.overflowX = 'scroll';
             secondaryDisplay.scrollLeft = width;
-        }
-        /*const btns = document.getElementById("btn");
-const primaryDisplay = document.getElementById("display");
-const secondaryDisplay = document.getElementById("secondary-display");*/
-        else {
+        } else {
             secondaryDisplay.style.overflowX = 'hidden';
         }
 
@@ -105,9 +97,6 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
                 secondaryRender(currentString);
                 primaryRender(resultString);
                 lastOperator = false;
-                /*const btns = document.getElementById("btn");
-const primaryDisplay = document.getElementById("display");
-const secondaryDisplay = document.getElementById("secondary-display");*/
             } else {
                 currentString = currentString.concat(value);
                 resultString = resultString.concat(value);
@@ -117,9 +106,7 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
 
         } else if (isOp(value)) {
             if (currentString.length == 0 && (value == '/' || value == '*'));
-            /*const btns = document.getElementById("btn");
-const primaryDisplay = document.getElementById("display");
-const secondaryDisplay = document.getElementById("secondary-display");*/
+
             else {
                 resultString = "";
                 primaryRender(value);
@@ -136,9 +123,7 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
                     secondaryRender(currentString);
                 }
             }
-            /*const btns = document.getElementById("btn");
-            const primaryDisplay = document.getElementById("display");
-            const secondaryDisplay = document.getElementById("secondary-display");*/
+
         } else if (value == '.') {
             if (resultString.indexOf('.') < 0) {
                 if (resultString.length == 0) {
@@ -146,11 +131,7 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
                     resultString = resultString.concat('0.');
                     secondaryRender(currentString);
                     primaryRender(resultString);
-                }
-                /*const btns = document.getElementById("btn");
-                const primaryDisplay = document.getElementById("display");
-                const secondaryDisplay = document.getElementById("secondary-display");*/
-                else {
+                } else {
                     currentString = currentString.concat(value);
                     resultString = resultString.concat(value);
                     secondaryRender(currentString);
@@ -168,9 +149,6 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
                 secondaryRender('0');
                 primaryRender(result);
             }
-            /*const btns = document.getElementById("btn");
-            const primaryDisplay = document.getElementById("display");
-            const secondaryDisplay = document.getElementById("secondary-display");*/
         } else if (value == 'clear') {
             currentString = '';
             resultString = '';
@@ -184,10 +162,6 @@ const secondaryDisplay = document.getElementById("secondary-display");*/
             primaryDisplay.style.overflowX = 'hidden';
         }
     }
-
-    /*const btns = document.getElementById("btn");
-    const primaryDisplay = document.getElementById("display");
-    const secondaryDisplay = document.getElementById("secondary-display");*/
     for (let elem of btns.children) {
         elem.addEventListener('click', evaluate);
     }
