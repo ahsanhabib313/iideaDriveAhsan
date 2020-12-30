@@ -25,3 +25,6 @@ Route::get('cart.php', function () {
 Route::get('login.php', function () {
     return view('login');
 });
+Route::get('driverLogin.php', function () {
+    return view('driverLogin');
+});
