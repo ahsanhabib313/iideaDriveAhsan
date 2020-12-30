@@ -41,12 +41,23 @@
         ]
     });
 
-    const foodCta = document.querySelector('#food-cta button');
-    const price = document.querySelector('#price').textContent;
+    const foodCta = document.getElementsByClassName('food-order-btn');
+    const price = document.querySelectorAll('.price');
     const update = document.querySelector('#update li span');
+    console.log(price);
+    for (var i = 0; i < foodCta.length; i++) {
+        let btn = foodCta[i];
 
-    foodCta.addEventListener('click', function() {
-        update.textContent = price
-    });
+        btn.addEventListener('click', function() {
+            let total = 0;
+            let priceValue = price[i];
+
+
+            total = price.value * priceValue;
+
+            update.innerHTML = total
+
+        })
+    }
 
 })(jQuery);

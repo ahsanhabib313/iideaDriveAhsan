@@ -360,3 +360,69 @@ tbody tr:nth-child(odd) {
 
 
 /* footer-ends */
+
+
+/* login page starts */
+
+.content-wrapper.full-page-wrapper {
+    margin-left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.auth form .form-group {
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.auth form .form-group label {
+    margin-bottom: 0;
+    vertical-align: bottom;
+    font-size: .8125rem;
+    font-family: "roboto-light", sans-serif;
+}
+
+.login input {
+    background: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 2.5rem;
+    font-size: .9375rem;
+}
+
+.login-btn {
+    background: var(--theme-color);
+    transition: .5s linear all;
+    border: none;
+}
+
+.login-btn:hover {
+    background: var(--hover-color);
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-black:hover {
+    color: rgb(37, 37, 37);
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.auth .login-half-bg {
+    background: url(../images/food-3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* login page ends */
