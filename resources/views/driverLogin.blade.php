@@ -11,6 +11,7 @@
   </div>
   <div class="calc-display">
     <div class="calc-display-span secondary-display" id="secondary-display">
+      <p></p>
     </div>
     <div class="calc-display-span primary-display" id="display">
     </div>
