@@ -659,3 +659,16 @@ tbody tr:nth-child(odd) {
 .calc-btn-clear:active {
     transform: scale(0.9);
 }
+
+
+/* order-confirmation page */
+
+.box-width {
+    width: 20%;
+}
+
+.box-height {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}

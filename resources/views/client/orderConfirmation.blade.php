@@ -12,8 +12,9 @@
       <div class="padding-container">
         <div class="row d-flex align-items-center">
           <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="title menus">
-              <h1>Confirmed Order</h1>
+            <div class="title">
+              <h5>Order 201231111 Confirmed</h5>
+              <p>Thanks For Your Order</p>
             </div>
           </div>
           <div class="col-lg-9 col-md-9 col-sm-9">
@@ -36,9 +37,9 @@
                 <thead>
                   <tr>
                     <th scope="col">Order Id</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
+                    <th scope="col">Product</th>
+                    <th scope="col" class="box-width">Quantity</th>
+                    <th scope="col">Unit Price</th>
                     <th scope="col">Total</th>
                   </tr>
                 </thead>
@@ -46,23 +47,53 @@
                   <tr>
                     <th scope="row">1</th>
                     <td>Beefy Burger</td>
-                    <td>$8</td>
                     <td class="check-quantity">2</td>
+                    <td>$8</td>
                     <td>$16</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Pizza Bizz</td>
-                    <td>$15</td>
                     <td class="check-quantity">2</td>
+                    <td>$15</td>
                     <td>$30</td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Delish Smoothie</td>
-                    <td>$20</td>
                     <td class="check-quantity">1</td>
                     <td>$20</td>
+                    <td>$20</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td><h5>Subtotal</h5></td>
+                    <td><h5>$66</h5></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td>Vat</td>
+                    <td>$10</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                    <td>
+                      <div class="payment-info">
+                        <h5>Payment Method:</h5>  
+                        <input type="checkbox" name="" id="">
+                        <label for="Cash On Delivery">Cash On Delivery</label>
+                        <br>
+                        <input type="checkbox" name="" id="">
+                        <label for="Card">Card</label>
+                      </div>
+                    </td>
+                    <td><h5>Grand Total</h5></td>
+                    <td ><h5>$76</h5></td>
                   </tr>
                 </tbody>
               </table>
