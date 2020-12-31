@@ -13,7 +13,7 @@
         <div class="row d-flex align-items-center">
           <div class="col-lg-3 col-md-3 col-sm-3">
             <div class="title menus">
-              <h1>Cart</h1>
+              <h1>Confirmed Order</h1>
             </div>
           </div>
           <div class="col-lg-9 col-md-9 col-sm-9">
@@ -31,11 +31,11 @@
       <section class="cart-wrapper">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 scroll">
+            <div class="col-lg-12 scroll">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Sl No.</th>
+                    <th scope="col">Order Id</th>
                     <th scope="col">Item</th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
@@ -46,45 +46,26 @@
                   <tr>
                     <th scope="row">1</th>
                     <td>Beefy Burger</td>
-                    <td><span class="get-price">$8</span></td>
-                    <td class="check-quantity">
-                      <input class="change-quantity" type="number" value="1">
-                    </td>
-                    <td><span class="show-price">$8</span></td>
+                    <td>$8</td>
+                    <td class="check-quantity">2</td>
+                    <td>$16</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Pizza Bizz</td>
-                     <td><span class="get-price">$10</span></td>
-                    <td class="check-quantity">
-                      <input class="change-quantity" type="number" value="1">
-                    </td>
-                    <td><span class="show-price">$10</span></td>
+                    <td>$15</td>
+                    <td class="check-quantity">2</td>
+                    <td>$30</td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Delish Smoothie</td>
-                     <td><span class="get-price">$12</span></td>
-                    <td class="check-quantity">
-                      <input class="change-quantity" type="number" value="1">
-                    </td>
-                    <td><span class="show-price">$12</span></td>
+                    <td>$20</td>
+                    <td class="check-quantity">1</td>
+                    <td>$20</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="col-lg-4 mt">
-              <form action="#">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title text-center">Confirm Order Here</h3>
-                    <ul class="grand-total">
-                      <li>Grand Total <span>$100</span></li>
-                    </ul>
-                    <a class="order-cta text-white" data-toggle="modal" data-target="#exampleModalLong">Confirm</a>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -104,7 +85,7 @@
                 Do you want to confirm the order?
               </div>
               <div class="modal-footer">
-                <a href="orderConfirmation" type="button" class="btn order-cta"> Confirm Order</a>
+                <a href="orderConfirmation.php" type="button" class="btn order-cta"> Confirm Order</a>
               </div>
             </div>
           </div>

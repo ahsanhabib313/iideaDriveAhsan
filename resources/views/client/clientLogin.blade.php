@@ -5,7 +5,6 @@
         <div class="calc">
   <div class="calc-title">
     <span class="calc-title-span">
-      <input type="text" placeholder="Enter driver name">
     </span>
     <p class="mt-2">Enter Pin</p>
   </div>

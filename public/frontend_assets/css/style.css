@@ -256,6 +256,7 @@ tbody tr:nth-child(odd) {
     border-radius: 5px;
     text-align: center;
     border: none;
+    cursor: pointer;
 }
 
 .grand-total {

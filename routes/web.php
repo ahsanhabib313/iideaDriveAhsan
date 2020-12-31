@@ -28,3 +28,6 @@ Route::get('/login', function () {
 Route::get('/clientLogin', function () {
     return view('client.clientLogin');
 });
+Route::get('/orderConfirmation', function () {
+    return view('client.orderConfirmation');
+});

@@ -41,6 +41,44 @@
         ]
     });
 
+    // cart price updates
+    const changeQty = document.getElementsByClassName("change-quantity");
+    const getPrice = document.querySelectorAll(".get-price");
+    const showPrice = document.querySelectorAll(".show-price");
+
+    for (let i = 0; i < changeQty.length; i++) {
+        // Prevents input value from going negetive
+
+        let input = changeQty[i];
+        input.addEventListener("change", function(event) {
+            var input = event.target;
+            if (isNaN(input.value) || input.value <= 0) {
+                input.value = 1;
+            }
+
+            // updates total amount by multiplying price and quantity
+            let total = 0;
+
+            let priceValue = getPrice[i];
+
+            let priceElement = parseFloat(priceValue.innerHTML.replace("$", " "));
+            let quantityElement = input.value;
+            total = priceElement * quantityElement;
+
+            showPrice[i].innerHTML = "$" + total + ".00";
+        });
+
+        // Prevents typing characters inside input field
+        input.addEventListener("keypress", function(event) {
+            var char = String.fromCharCode(event.which);
+            if (!/[0-9]/.test(char)) {
+                event.preventDefault();
+            }
+        });
+    }
+
+
+    // order update on menu page
     const foodCta = document.getElementsByClassName('food-order-btn');
     const price = document.querySelectorAll('.price');
     const update = document.querySelector('#update li span');;
@@ -169,5 +207,7 @@
     function isOp(value) {
         return (/\+|\-|\*|\//).test(value);
     }
+
+
 
 })(jQuery);
