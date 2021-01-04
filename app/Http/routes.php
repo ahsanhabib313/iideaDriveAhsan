@@ -21,3 +21,7 @@ Route::get('/orderConfirmation', [
 	'as'   => 'orderConfirmation',
 	'uses' => 'OrderConfirmationController@showOrderConfirmation',
 ]);
+Route::get('/dashboard', [
+	'as'   => 'dashboard',
+	'uses' => 'dashboardController@showDashboard',
+]);
