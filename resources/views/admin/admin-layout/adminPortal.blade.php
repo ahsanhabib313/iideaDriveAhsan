@@ -36,20 +36,16 @@
               <span class="btn">+ Create new</span>
             </a>
             <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/createUser">
                 <i class="icon-user text-primary"></i>
-                User Account
+                Create User
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/modifyUser">
                 <i class="icon-user-following text-warning"></i>
-                Admin User
+                Modify User
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                <i class="icon-docs text-success"></i>
-                Sales report
-              </a>
             </div>
           </li>
         </ul>

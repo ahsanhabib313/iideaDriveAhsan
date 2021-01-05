@@ -25,3 +25,7 @@ Route::get('/dashboard', [
 	'as'   => 'dashboard',
 	'uses' => 'dashboardController@showDashboard',
 ]);
+Route::get('/createUser', [
+	'as'   => 'createUser',
+	'uses' => 'createUserController@createUser',
+]);

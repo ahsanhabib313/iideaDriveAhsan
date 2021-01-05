@@ -22,9 +22,9 @@
               <a class="nav-link" href="/dashboard">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
-                <span class="badge badge-success">New</span>
               </a>
             </li>
+              
           </ul>
         </nav>
         <!-- partial -->
