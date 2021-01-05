@@ -41,10 +41,6 @@
                 Create User
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/modifyUser">
-                <i class="icon-user-following text-warning"></i>
-                Modify User
-              </a>
               <div class="dropdown-divider"></div>
             </div>
           </li>

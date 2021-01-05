@@ -29,3 +29,7 @@ Route::get('/createUser', [
 	'as'   => 'createUser',
 	'uses' => 'createUserController@createUser',
 ]);
+Route::get('/modifyUser', [
+	'as'   => 'modifyUser',
+	'uses' => 'modifyUserController@modifyUser',
+]);

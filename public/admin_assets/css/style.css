@@ -12,6 +12,24 @@
     padding: 10px 30px;
 }
 
+.bg-theme-color {
+    background: var(--theme-color);
+    color: #fff;
+}
+
+.modify {
+    color: #fff;
+    background: var(--theme-color);
+    padding: 10px 16px;
+    font-size: 14px;
+    transition: .3s linear all;
+}
+
+.modify:hover {
+    color: #fff;
+    background: var(--hover-color);
+}
+
 @-moz-keyframes flash {
     0% {
         opacity: 1;
