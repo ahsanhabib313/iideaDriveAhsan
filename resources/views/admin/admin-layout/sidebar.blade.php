@@ -24,6 +24,12 @@
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/orderList">
+                <i class="icon-list menu-icon"></i>
+                <span class="menu-title">Order List</span>
+              </a>
+            </li>
               
           </ul>
         </nav>

@@ -1,5 +1,14 @@
 (function($) {
     'use strict';
+    $(document).ready(function() {
+        $('#data-table').DataTable({
+            "lengthMenu": [
+                [4, 10, 20, -1],
+                [4, 10, 20, "All"]
+            ]
+
+        });
+    });
     $(function() {
         if ($("#dashboard-rating-1").length) {
             $('#dashboard-rating-1').barrating({

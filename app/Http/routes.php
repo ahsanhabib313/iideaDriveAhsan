@@ -33,3 +33,7 @@ Route::get('/modifyUser', [
 	'as'   => 'modifyUser',
 	'uses' => 'modifyUserController@modifyUser',
 ]);
+Route::get('/orderList', [
+	'as'   => 'orderList',
+	'uses' => 'orderListController@orderList',
+]);

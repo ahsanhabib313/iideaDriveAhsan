@@ -8,7 +8,7 @@
          <!--Sidebar-->
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 bg-white p-4">
                  <h2 class="mb-4">Create Users</h2>
                 <form>
                     <div class="form-row">
@@ -68,62 +68,63 @@
                 </form>
             </div> 
           </div>
-                 <div class="row mt-5">
-                    <div class="col-lg-12">
-                         <table class="table">
-                            <thead class="thead bg-theme-color">
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">City</th>
-                                    <th scope="col">Zip</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Mark123</td>
-                                    <td>mark@gmail.com</td>
-                                    <td>England</td>
-                                    <td>1254</td>
-                                    <td>
-                                        <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <th scope="row">1</th>
-                                    <td>Rick</td>
-                                    <td>Wayne</td>
-                                    <td>Rick</td>
-                                    <td>rick@gmail.com</td>
-                                    <td>Australia</td>
-                                    <td>789</td>
-                                    <td>
-                                        <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <th scope="row">1</th>
-                                    <td>Shane</td>
-                                    <td>Murphy</td>
-                                    <td>Murphy</td>
-                                    <td>shane@gmail.com</td>
-                                    <td>Netherlands</td>
-                                    <td>5897</td>
-                                    <td>
-                                        <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="row mt-5">
+                <div class="col-lg-12 bg-white p-4">
+                    <h2 class="mb-4">All users</h2>
+                    <table class="table">
+                        <thead class="thead bg-theme-color">
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">City</th>
+                                <th scope="col">Zip</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>Mark123</td>
+                                <td>mark@gmail.com</td>
+                                <td>England</td>
+                                <td>1254</td>
+                                <td>
+                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Rick</td>
+                                <td>Wayne</td>
+                                <td>Rick</td>
+                                <td>rick@gmail.com</td>
+                                <td>Australia</td>
+                                <td>789</td>
+                                <td>
+                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Shane</td>
+                                <td>Murphy</td>
+                                <td>Murphy</td>
+                                <td>shane@gmail.com</td>
+                                <td>Netherlands</td>
+                                <td>5897</td>
+                                <td>
+                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="container-fluid clearfix">
