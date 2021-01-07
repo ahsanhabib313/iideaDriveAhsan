@@ -34,8 +34,20 @@
     border: 1px solid #b5b5b5;
 }
 
+.content-wrapper form textarea {
+    border: 1px solid #b5b5b5;
+}
+
 .dataTables_filter input {
     border: 1px solid #b5b5b5
+}
+
+.d-button {
+    border: none;
+}
+
+.d-button i {
+    font-size: 15px;
 }
 
 @-moz-keyframes flash {
@@ -27520,8 +27532,8 @@ dl li {
 .jsgrid .jsgrid-table th img,
 .table td img,
 .jsgrid .jsgrid-table td img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
 }
 
@@ -32368,4 +32380,4 @@ div.tagsinput span.tag a {
 }
 
 
-/*# sourceMappingURL=maps/style.css.map */
+/*# sourceMappingURL=maps/style.css.map *

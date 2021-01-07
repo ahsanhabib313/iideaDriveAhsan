@@ -30,6 +30,12 @@
                 <span class="menu-title">Order List</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/manageMenu">
+                <i class="icon-options menu-icon"></i>
+                <span class="menu-title">Manage Menu</span>
+              </a>
+            </li>
               
           </ul>
         </nav>

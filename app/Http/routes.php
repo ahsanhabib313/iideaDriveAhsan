@@ -37,3 +37,7 @@ Route::get('/orderList', [
 	'as'   => 'orderList',
 	'uses' => 'orderListController@orderList',
 ]);
+Route::get('/manageMenu', [
+	'as'   => 'manageMenu',
+	'uses' => 'manageMenuController@manageMenu',
+]);

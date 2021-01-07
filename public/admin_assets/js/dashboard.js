@@ -9,6 +9,17 @@
 
         });
     });
+    const deleteBtn = $('.deleteMenu');
+    for (var i = 0; i < deleteBtn.length; i++) {
+        var buttons = deleteBtn[i]
+        buttons.addEventListener('click', function(event) {
+            var btnClicked = event.target
+            btnClicked.parentElement.parentElement.parentElement.remove();
+        })
+    }
+
+
+
     $(function() {
         if ($("#dashboard-rating-1").length) {
             $('#dashboard-rating-1').barrating({

@@ -98,7 +98,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">2</th>
                                 <td>Rick</td>
                                 <td>Wayne</td>
                                 <td>Rick</td>
@@ -110,7 +110,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">3</th>
                                 <td>Shane</td>
                                 <td>Murphy</td>
                                 <td>Murphy</td>
