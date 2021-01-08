@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('/', [
 	'as'   => 'index',
 	'uses' => 'IndexController@showIndex',
@@ -23,21 +22,23 @@ Route::get('/orderConfirmation', [
 ]);
 Route::get('/dashboard', [
 	'as'   => 'dashboard',
-	'uses' => 'dashboardController@showDashboard',
+	'uses' => 'DashboardController@showDashboard',
 ]);
 Route::get('/createUser', [
 	'as'   => 'createUser',
-	'uses' => 'createUserController@createUser',
+	'uses' => 'CreateUserController@createUser',
 ]);
+Route::post('/createUser', 'CreateUserController@postCreateUser');
+
 Route::get('/modifyUser', [
 	'as'   => 'modifyUser',
 	'uses' => 'modifyUserController@modifyUser',
 ]);
 Route::get('/orderList', [
 	'as'   => 'orderList',
-	'uses' => 'orderListController@orderList',
+	'uses' => 'OrderController@orderList',
 ]);
 Route::get('/manageMenu', [
 	'as'   => 'manageMenu',
-	'uses' => 'manageMenuController@manageMenu',
+	'uses' => 'ManageMenuController@manageMenu',
 ]);

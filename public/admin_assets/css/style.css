@@ -32378,6 +32378,14 @@ div.tagsinput span.tag a {
     color: #ffffff;
     font-family: "roboto-medium", sans-serif;
 }
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #a94442;
+}
 
 
 /*# sourceMappingURL=maps/style.css.map *

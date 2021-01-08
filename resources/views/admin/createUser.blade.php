@@ -8,63 +8,69 @@
          <!--Sidebar-->
         <div class="content-wrapper">
           <div class="row">
+            {!!Form::open(array('url' => 'createUser'))!!}
             <div class="col-lg-12 bg-white p-4">
                  <h2 class="mb-4">Create Users</h2>
                 <form>
                     <div class="form-row">
-                            <div class="form-group col-md-4">
-                        <label for="First Name">First Name</label>
-                        <input type="name" class="form-control"  placeholder="First Name">
+                    <div class="form-group col-md-4 {{ ($errors->has('first_name')) ? 'has-error' : '' }}">
+                        {!! Form::label('first_name', trans("User.first_name"), ['class' => 'control-label required']) !!}
+                        {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
+                        @if($errors->has('first_name'))
+                            <p class="help-block">{{ $errors->first('first_name') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="Last name">Last Name</label>
-                        <input type="name" class="form-control" placeholder="Last Name">
+                    <div class="form-group col-md-4 {{ ($errors->has('last_name')) ? 'has-error' : '' }}">
+                        {!! Form::label('last_name', trans("User.last_name"), ['class' => 'control-label required']) !!}
+                        {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
+                        @if($errors->has('last_name'))
+                            <p class="help-block">{{ $errors->first('last_name') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="Username">Username</label>
-                        <input type="name" class="form-control"  placeholder="Username">
+                    <div class="form-group col-md-4 {{ ($errors->has('Username')) ? 'has-error' : '' }}">
+                        {!! Form::label('Username', trans("User.Username"), ['class' => 'control-label required']) !!}
+                        {!! Form::text('Username', null, ['class' => 'form-control']) !!}
+                        @if($errors->has('Username'))
+                            <p class="help-block">{{ $errors->first('Username') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="Email">Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
+                    <div class="form-group col-md-4 {{ ($errors->has('email')) ? 'has-error' : '' }}">
+                        {!! Form::label('email', trans("User.email"), ['class' => 'control-label required']) !!}
+                        {!! Form::text('email', null, ['class' => 'form-control']) !!}
+                        @if($errors->has('email'))
+                            <p class="help-block">{{ $errors->first('email') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="City">City</label>
-                        <input type="text" class="form-control">
+                    <div class="form-group  col-md-4 {{ ($errors->has('password')) ? 'has-error' : '' }}">
+                        {!! Form::label('password', trans("User.password"), ['class' => 'control-label required']) !!}
+                        {!! Form::password('password',  ['class' => 'form-control']) !!}
+                        @if($errors->has('password'))
+                            <p class="help-block">{{ $errors->first('password') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="Zip">Zip</label>
-                        <input type="text" class="form-control">
+                    <div class="form-group col-md-4 {{ ($errors->has('password_confirmation')) ? 'has-error' : '' }}">
+                        {!! Form::label('password_confirmation', 'Password again', ['class' => 'control-label required']) !!}
+                        {!! Form::password('password_confirmation',  ['class' => 'form-control']) !!}
+                        @if($errors->has('password_confirmation'))
+                            <p class="help-block">{{ $errors->first('password_confirmation') }}</p>
+                        @endif
                     </div>
-                    <div class="form-group col-md-4 ml-3">
+                    <div class="form-group col-md-4 ml-3 {{ ($errors->has('profile')) ? 'has-error' : '' }}">
                         <label for="Role">User Role</label>
+                        @foreach ($profiles as $profile)
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                Admin
+                            <input class="form-check-input" type="radio" name="profile_id" id="profile" value="{{$profile->id}}">
+                            <label class="form-check-label" for="profile">
+                            {{$profile->description}}
                             </label>
+                            @if($errors->has('profile'))
+                            <p class="help-block">{{ $errors->first('profile') }}</p>
+                            @endif
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                Super Admin
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
-                            <label class="form-check-label" for="gridRadios3">
-                                Moderator
-                            </label>
-                        </div>    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option2">
-                            <label class="form-check-label" for="gridRadios4">
-                                Editor
-                            </label>
-                        </div>
+                        @endforeach 
                     </div>
                     </div>
-                    <input type="submit" class='user-info-submit'>
+                    {!!Form::submit(trans("User.sign_up"), array('class'=>"user-info-submit"))!!}
                 </form>
             </div> 
           </div>
@@ -136,6 +142,7 @@
         <!-- content-wrapper ends -->
       </div>
       <!-- row-offcanvas ends -->
+     {!!Form::close()!!}
     </div>
     <!-- page-body-wrapper ends -->
   </div>
