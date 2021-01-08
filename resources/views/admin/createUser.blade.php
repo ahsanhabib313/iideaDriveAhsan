@@ -85,48 +85,24 @@
                                 <th scope="col">Last Name</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">City</th>
-                                <th scope="col">Zip</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">Type</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Mark123</td>
-                                <td>mark@gmail.com</td>
-                                <td>England</td>
-                                <td>1254</td>
-                                <td>
-                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Rick</td>
-                                <td>Wayne</td>
-                                <td>Rick</td>
-                                <td>rick@gmail.com</td>
-                                <td>Australia</td>
-                                <td>789</td>
-                                <td>
-                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Shane</td>
-                                <td>Murphy</td>
-                                <td>Murphy</td>
-                                <td>shane@gmail.com</td>
-                                <td>Netherlands</td>
-                                <td>5897</td>
-                                <td>
-                                    <a href="/modifyUser" class="modify"><i class="fas fa-pencil-alt"></i></a>
-                                </td>
-                            </tr>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{$user->first_name}}</td>
+                                    <td>{{$user->last_name}}</td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->profile_id}}</td>
+                                    <td>
+                                        <a href="{{route('modifyUser', array('userId'=>$user->id))}}"  class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach 
                         </tbody>
                     </table>
                 </div>

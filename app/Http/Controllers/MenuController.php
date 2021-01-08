@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
     /**
-     * redirect to menu page
+     * show menu page
      * @param  Request $request http request
-     * @return \Illuminate\Http\RedirectResponse
      */
     public function showMenu(Request $request)
     {

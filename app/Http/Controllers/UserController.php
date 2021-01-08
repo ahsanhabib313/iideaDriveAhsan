@@ -14,7 +14,7 @@ use Mail;
 use Log;
 use DB;
 use Auth;
-class CreateuserController extends Controller
+class UserController extends Controller
 {
     protected $auth;
 
@@ -27,7 +27,9 @@ class CreateuserController extends Controller
     {
         $profiles = DB::table('profiles')
         ->get();
-        return view('admin.createUser',compact('profiles'));
+        $users = DB::table('Users')
+        ->get();
+        return view('admin.createUser',compact('profiles', 'users'));
     }
 
     /**
@@ -50,10 +52,23 @@ class CreateuserController extends Controller
         $user_data['password'] = Hash::make($request->get('password'));
 
         $user = User::create($user_data);
-        Log::info('Success! You can now login.');
+        Log::info('Success!');
 
-        session()->flash('message', 'Success! You can now login.');
+        session()->flash('message', 'Success!');
 
         return redirect('/createUser');
+    }
+
+    /**
+     * show modify user page.
+     *
+     * @param Request $request
+     *
+     * @return Redirect
+     */
+    public function modifyUser(Request $request, $userId)
+    {
+        Log::info('user_id :'  .$userId);
+        return view('admin.modifyUser');
     }
 }

@@ -26,13 +26,13 @@ Route::get('/dashboard', [
 ]);
 Route::get('/createUser', [
 	'as'   => 'createUser',
-	'uses' => 'CreateUserController@createUser',
+	'uses' => 'UserController@createUser',
 ]);
-Route::post('/createUser', 'CreateUserController@postCreateUser');
+Route::post('/createUser', 'UserController@postCreateUser');
 
-Route::get('/modifyUser', [
+Route::get('/{userId}/modifyUser', [
 	'as'   => 'modifyUser',
-	'uses' => 'modifyUserController@modifyUser',
+	'uses' => 'UserController@modifyUser',
 ]);
 Route::get('/orderList', [
 	'as'   => 'orderList',
