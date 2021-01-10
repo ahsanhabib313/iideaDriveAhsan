@@ -21,6 +21,10 @@
                                 <label for="Item Image">Item Image</label>
                                 <input type="file" class="form-control" >
                             </div>
+                               <div class="form-group col-md-12">
+                                <label for="Item Image">Category</label>
+                                <input type="text" class="form-control" >
+                            </div>
                             <div class="form-group col-md-12">
                                 <label for="Item Price">Item Price</label>
                                 <input type="name" class="form-control" placeholder="Price">
@@ -44,6 +48,7 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">Item Name</th>
                                 <th scope="col">Image</th>
+                                <th scope="col">Category</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Item Description</th>
                                 <th>Action</th>
@@ -54,6 +59,7 @@
                                 <th scope="row">1</th>
                                 <td>Beefy Burgers</td>
                                 <td><img src="{{asset('frontend_assets/')}}/images/food-1.jpg" alt=""></td>
+                                <td>Fast Food</td>
                                 <td>$20</td>
                                 <td>The best burger in town. Order now for the ultimate experience</td>
                                 <td>
@@ -63,10 +69,11 @@
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>Pizza Bizz</td>
-                                <td><img src="{{asset('frontend_assets/')}}/images/food-2.jpg" alt=""></td>
+                                <td>Delish Smoothie</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-4.jpg" alt=""></td>
+                                <td>Drinks</td>
                                 <td>$15</td>
-                                <td>The ultimate pizza to make an evening great</td>
+                                <td>Creamy smoothie on the run</td>
                                 <td>
                                     <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
                                     <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
@@ -76,6 +83,7 @@
                                 <th scope="row">3</th>
                                 <td>Crackled Sandwich</td>
                                 <td><img src="{{asset('frontend_assets/')}}/images/food-3.jpg" alt=""></td>
+                                <td>Fast Food</td>
                                 <td>$10</td>
                                 <td>Piping Hot sandwiches for the hustlerse</td>
                                 <td>
