@@ -50,6 +50,26 @@
     font-size: 15px;
 }
 
+.popup-btn {
+    display: flex;
+    justify-content: flex-end
+}
+
+.popup {
+    background: var(--hover-color);
+    padding: 10px 30px;
+    color: #ffffff;
+    border: none;
+}
+
+.ml {
+    margin-left: 10px;
+}
+
+.width {
+    width: 150px;
+}
+
 @-moz-keyframes flash {
     0% {
         opacity: 1;
@@ -26202,12 +26222,13 @@ dl li {
 
 .modal .modal-dialog .modal-content .modal-header {
     padding: 25px 26px;
+    background: var(--theme-color);
 }
 
 .modal .modal-dialog .modal-content .modal-header .close span {
     font-size: 20px;
     font-weight: 400;
-    color: #6a6a6a;
+    color: #fff;
 }
 
 .modal .modal-dialog .modal-content .modal-body {
@@ -32378,13 +32399,14 @@ div.tagsinput span.tag a {
     color: #ffffff;
     font-family: "roboto-medium", sans-serif;
 }
+
 .has-error .help-block,
 .has-error .control-label,
 .has-error .radio,
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
-  color: #a94442;
+    color: #a94442;
 }
 
 

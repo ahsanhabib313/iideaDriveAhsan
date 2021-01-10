@@ -8,6 +8,13 @@
             ]
 
         });
+        $('#menu-table').DataTable({
+            "lengthMenu": [
+                [4, 10, 20, -1],
+                [4, 10, 20, "All"]
+            ]
+
+        });
     });
     const deleteBtn = $('.deleteMenu');
     for (var i = 0; i < deleteBtn.length; i++) {
