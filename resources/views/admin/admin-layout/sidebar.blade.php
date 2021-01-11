@@ -36,7 +36,12 @@
                 <span class="menu-title">Manage Menu</span>
               </a>
             </li>
-              
+            <li class="nav-item">
+              <a class="nav-link" href="/addUser">
+                <i class="icon-settings menu-icon"></i>
+                <span class="menu-title">Add User</span>
+              </a>
+            </li>
           </ul>
         </nav>
         <!-- partial -->
