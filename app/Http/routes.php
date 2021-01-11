@@ -28,12 +28,16 @@ Route::get('/createUser', [
 	'as'   => 'createUser',
 	'uses' => 'UserController@createUser',
 ]);
+
 Route::post('/createUser', 'UserController@postCreateUser');
 
 Route::get('/{userId}/modifyUser', [
 	'as'   => 'modifyUser',
 	'uses' => 'UserController@modifyUser',
 ]);
+
+Route::post('/{userId}/modifyUser', 'UserController@postModifyUser');
+
 Route::get('/orderList', [
 	'as'   => 'orderList',
 	'uses' => 'OrderController@orderList',
