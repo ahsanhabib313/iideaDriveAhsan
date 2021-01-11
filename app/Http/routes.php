@@ -42,3 +42,7 @@ Route::get('/manageMenu', [
 	'as'   => 'manageMenu',
 	'uses' => 'ManageMenuController@manageMenu',
 ]);
+Route::get('/addUser', [
+	'as'   => 'addUser',
+	'uses' => 'AddUserController@addUser',
+]);

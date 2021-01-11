@@ -1,4 +1,4 @@
-@extends('admin.admin-layout.adminPortal')
+@extends('admin.admin-layout.manageMenuHeader')
 @section('dashboard_content')
          <!--Sidebar-->
           <!-- partial -->
@@ -14,10 +14,7 @@
                             <h2 class="mb-3">Menus</h2>
                         </div>
                         <div class="col-lg-6">
-                            <div class="popup-btn">
-                                <button class="popup" data-toggle="modal" data-target=".bd-example-modal-lg">Add Menu</button>
-                                <button class="popup ml" data-toggle="modal" data-target="#exampleModal"">Add Category</button>
-                            </div>
+
                         </div>
                     </div>
                     <table class="table" id="menu-table">
