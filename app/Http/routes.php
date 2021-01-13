@@ -50,3 +50,11 @@ Route::get('/addUser', [
 	'as'   => 'addUser',
 	'uses' => 'AddUserController@addUser',
 ]);
+Route::get('/manageTills', [
+	'as'   => 'manageTills',
+	'uses' => 'ManageTillsController@manageTills',
+]);
+Route::get('/showTills', [
+	'as'   => 'showTills',
+	'uses' => 'ShowTillsController@showTills',
+]);

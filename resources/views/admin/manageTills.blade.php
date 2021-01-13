@@ -9,79 +9,71 @@
         <div class="content-wrapper">
           <div class="row">
             <div class="col-lg-6">
-                <h2 class="mb-2">Order List </h2>
+                <h2 class="mb-2">Manage Tills </h2>
             </div>
             <div class="col-lg-6 d-flex align-items-center justify-content-end">
-                <div class="btn-group" >
-                  <button type="button" class="btn btn-success">Delivered</button>
-                  <button type="button" class="btn btn-primary">Delivering</button>
-                  <button type="button" class="btn btn-info">In Queue</button>
-              </div>
+                
             </div>
               <div class="col-lg-12 bg-white p-4">
                     <table class="table" id="data-table">
                         <thead class="thead bg-theme-color">
                             <tr>
-                                <th scope="col">Order Id</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Customer</th>
+                                <th scope="col">Id</th>
                                 <th scope="col">Item</th>
+                                <th scope="col">Image</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Total</th>
+                                <th scope="col">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">10101</th>
-                                <td>Dec 15, 2020</td>
-                                <td>Delivered</td>
-                                <td>Mark123</td>
                                 <td>Beefy Burger</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-1.jpg" alt=""></td>
                                 <td>$20</td>
                                 <td>1</td>
                                 <td>$20</td>
+                                <td>
+                                    <button class="till-btn btn btn-primary">Active</button>
+                                </td>
                             </tr>
                             <tr>
                                <th scope="row">10102</th>
-                                <td>Dec 31, 2020</td>
-                                <td>Delivered</td>
-                                <td>Austin</td>
                                 <td>Delish Smoothie</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-4.jpg" alt=""></td>
                                 <td>$5</td> 
                                 <td>2</td>
                                 <td>$10</td>
+                                <td> <button class="till-btn btn btn-primary">Active</button></td>
                             </tr>
                             <tr>
                               <th scope="row">10103</th>
-                                <td>Jan 06, 2021</td>
-                                <td>On Progress</td>
-                                <td>Della</td>
                                 <td>Fried Chicken</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-6.jpg" alt=""></td>
                                 <td>$25</td> 
                                 <td>4</td>
                                 <td>$100</td>
+                                <td> <button class="till-btn btn btn-info">In Queue</button></td>
                             </tr>
                                   <tr>
-                              <th scope="row">10103</th>
-                                <td>Jan 06, 2021</td>
-                                <td>On Progress</td>
-                                <td>Della</td>
-                                <td>Fried Chicken</td>
+                              <th scope="row">10104</th>
+                                <td>Crackled Sandwich</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-3.jpg" alt=""></td>
                                 <td>$25</td> 
                                 <td>4</td>
-                                <td>$100</td>
+                                <td>$100</td>  
+                                <td>  <button class="till-btn btn btn-danger">Deactive</button></td>
                             </tr>
-                                  <tr>
-                              <th scope="row">10103</th>
-                                <td>Jan 06, 2021</td>
-                                <td>On Progress</td>
-                                <td>Della</td>
-                                <td>Fried Chicken</td>
+                            <tr>
+                              <th scope="row">10105</th>
+                                <td>French Fries</td>
+                                <td><img src="{{asset('frontend_assets/')}}/images/food-5.jpg" alt=""></td>
                                 <td>$25</td> 
                                 <td>4</td>
                                 <td>$100</td>
+                                <td> <button class="till-btn btn btn-info">In Queue</button></td>
                             </tr>
                         </tbody>
                     </table>

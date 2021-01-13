@@ -54,6 +54,10 @@ p {
     padding: 50px 0;
 }
 
+.tills-padding {
+    padding: 40px 0 20px 0;
+}
+
 .sort {
     display: flex;
     align-items: center;
@@ -671,4 +675,25 @@ tbody tr:nth-child(odd) {
     display: flex;
     align-items: center;
     height: 100px;
+}
+
+
+/* show tills page */
+
+table.scroll tbody {
+    height: 350px;
+    overflow-y: scroll;
+    display: block;
+}
+
+.tills-container {
+    background: #f8f8f8;
+}
+
+.tills-food-info {
+    padding: 20px;
+}
+
+.tills-food-img img {
+    width: 100%;
 }
