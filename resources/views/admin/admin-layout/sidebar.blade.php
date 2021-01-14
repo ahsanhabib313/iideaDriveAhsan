@@ -43,6 +43,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/showcategory">
+                <i class="icon-eye menu-icon"></i>
+                <span class="menu-title">Show Category</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/manageTills">
                 <i class="icon-pencil menu-icon"></i>
                 <span class="menu-title">Manage Tills</span>

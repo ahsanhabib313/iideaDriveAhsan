@@ -85,7 +85,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+              </div>
         
             </div>
           <!-- partial:partials/_footer.html -->

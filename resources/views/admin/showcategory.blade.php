@@ -7,49 +7,55 @@
         <!-- partial -->
          <!--Sidebar-->
         <div class="content-wrapper">
-            <div class="row mt-5 ">
+          <div class="row">
+            <div class="col-lg-12">
+                <h4>Total Categories: {{ $total_cat }}</h4>
                 <div class="col-lg-12 bg-white p-4">
-                    <div class="row mb-2">
-                        <div class="col-lg-6">
-                            <h2 class="mb-3">Menus</h2>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">
+                            {{-- <button type="button" class="close" data-dismiss="alert">×</button>     --}}
+                            <strong>{{ $message }}</strong>
                         </div>
-                        <div class="col-lg-6">
+                    @endif
+                    @if ($errors->all())
+                        <div class="aler alert-danger alert-block p-2 mb-3">
+                            @foreach ($errors->all() as $error)
+                                <li><strong>{{ $error }}</strong></li>
+                            @endforeach
+                        </div>
+                    @endif
 
-                        </div>
-                    </div>
-                    <table class="table" id="menu-table">
+                    <table class="table" id="data-table">
                         <thead class="thead bg-theme-color">
                             <tr>
-                                <th>Serial</th>
-                                <th scope="col">Id</th>
-                                <th scope="col">Item Name</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Item Description</th>
-                                <th>Action</th>
+                                <th scope="col">Serial</th>
+                                <th scope="col">Category Id</th>
+                                <th scope="col">Category Name</th>
+                                <th scope="col">Category description</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($menu as $item)
-                               <tr>
-                                <th scope="row">{{ $loop->index+1 }}</th>                           
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td><img src='{{ $item->item_image }}' alt=""></td>
-                                <td>{{ $item->item_category }}</td>
-                                <td>{{ $item->item_price}}</td>
-                                <td>{{ $item->item_description }}</td>
+                           
+                            @foreach ($category as $cat)
+                            <tr>
+                                <th scope="row">{{ $loop->index+1 }}</th>
+                                <th scope="row">{{ $cat->id }}</th>
+                                <td>{{Str::title($cat->name) }}</td>
+                                <td>{{ $cat->description }}</td>
                                 <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
+                                    <a href="{{ url('editcategory') }}/{{ $cat->id }}" class="btn btn-primary text-white">Edit</a>
+                                    <a href="{{ url('deletecategory') }}/{{ $cat->id }}" class="btn btn-danger text-white">Delete</a>
                                 </td>
-                            </tr>     
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>
-                </div>
+              </div>
+        
             </div>
+          </div>
+           
             {{-- add menu modal --}}
             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -66,7 +72,7 @@
                             <div class="row">
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                        <form  method="post" action="{{ url('manageMenu') }}" enctype="multipart/form-data">
+                                        <form  method="post" action="{{ url('addmenu') }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
@@ -75,19 +81,19 @@
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Item Image</label>
-                                                    <input type="file" name="item_image"  class="form-control" >
+                                                    <input type="file" name="item_image" class="form-control" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Category</label>
-                                                    <input type="text" name="item_category"  class="form-control" >
+                                                    <input type="text" name="item_category" class="form-control" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Price">Item Price</label>
-                                                    <input type="number" name="item_price"  class="form-control" placeholder="Price">
+                                                    <input type="number" name="item_price" class="form-control" placeholder="Price">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Description">Item Description</label>
-                                                    <textarea type="text" name="item_description"  class="form-control" rows="8"  placeholder="Description"></textarea>
+                                                    <textarea type="text" name="item_description" class="form-control" rows="8"  placeholder="Description"></textarea>
                                                 </div>
                                             </div>
                                             <input type="submit" class='user-info-submit'>
@@ -100,7 +106,7 @@
                 </div>
             </div>
             {{-- add menu modal --}}
-
+          
             {{-- add category modal --}}
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -116,16 +122,16 @@
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
                                         <h2 class="mb-4">Add Category</h2>
-                                        <form action="addcategory"  method="post">
+                                        <form action="{{ url('addcategory') }}"  method="post">
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Name">Category Name</label>
-                                                    <input type="text" class="form-control" name="name"  placeholder="name">
+                                                    <input type="text" class="form-control" name="name"  placeholder="name" value="{{ old('name') }}">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Description">Category Description</label>
-                                                    <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description"></textarea>
+                                                    <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description">{{ old('description') }}</textarea>
                                                 </div>
                                             </div>
                                             <input type="submit" class='user-info-submit'>
@@ -138,6 +144,8 @@
                 </div>
             </div>
             {{-- add category modal --}}
+
+
 
           <!-- partial:partials/_footer.html -->
           <footer class="footer">

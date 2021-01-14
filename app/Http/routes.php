@@ -58,3 +58,31 @@ Route::get('/showTills', [
 	'as'   => 'showTills',
 	'uses' => 'ShowTillsController@showTills',
 ]);
+Route::post('/addcategory', [
+	'as'   => 'addcategory',
+	'uses' => 'CategoryController@insert',
+]);
+Route::get('/showcategory', [
+	'as'   => 'showcategory',
+	'uses' => 'CategoryController@show',
+]);
+Route::get('/deletecategory/{id}', [
+	'as'   => 'deletecategory/{id}',
+	'uses' => 'CategoryController@destroy',
+]);
+Route::get('/editcategory/{id}', [
+	'as'   => 'editcategory/{id}',
+	'uses' => 'CategoryController@edit',
+]);
+Route::post('/updatecategory', [
+	'as'   => 'updatecategory',
+	'uses' => 'CategoryController@newUpdate',
+]);
+Route::post('/addmenu', [
+	'as'   => 'addmenu',
+	'uses' => 'ManageMenuController@insertmenu',
+]);
+Route::post('/manageMenu', [
+	'as'   => 'manageMenu',
+	'uses' => 'ManageMenuController@showmenu',
+]);
