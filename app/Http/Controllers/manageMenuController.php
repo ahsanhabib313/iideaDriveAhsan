@@ -57,7 +57,7 @@ class manageMenuController extends Controller
 
             \Storage::put(config('iideadrive.menu_images') . '/' . $filename, file_get_contents($file_full_path));
         }
-        $menus->item_image = $file_full_path;
+        $menus->item_image = config('iideadrive.menu_images') . '/' . $filename;
         $menus->save();
 
         

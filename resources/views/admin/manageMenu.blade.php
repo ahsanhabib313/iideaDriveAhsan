@@ -36,7 +36,7 @@
                                 <th scope="row">{{ $loop->index+1 }}</th>                           
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->item_name }}</td>
-                                <td><img src='{{ $item->item_image }}' alt=""></td>
+                                <td><img src='{{ asset($item->item_image) }}' alt=""></td>
                                 <td>{{ $item->item_category }}</td>
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
