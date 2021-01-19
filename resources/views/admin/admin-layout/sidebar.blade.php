@@ -27,13 +27,13 @@
             <li class="nav-item">
               <a class="nav-link" href="/orderList">
                 <i class="icon-list menu-icon"></i>
-                <span class="menu-title">Order List</span>
+                <span class="menu-title">Orders</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/manageMenu">
                 <i class="icon-options menu-icon"></i>
-                <span class="menu-title">Manage Menu</span>
+                <span class="menu-title">Menus</span>
               </a>
             </li>
             <li class="nav-item">
@@ -45,13 +45,13 @@
             <li class="nav-item">
               <a class="nav-link" href="/showcategory">
                 <i class="icon-eye menu-icon"></i>
-                <span class="menu-title">Show Category</span>
+                <span class="menu-title">Categories</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/manageTills">
                 <i class="icon-pencil menu-icon"></i>
-                <span class="menu-title">Manage Tills</span>
+                <span class="menu-title">Tills</span>
               </a>
             </li>
           </ul>

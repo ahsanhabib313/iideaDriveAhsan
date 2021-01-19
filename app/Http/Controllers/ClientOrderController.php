@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OrderConfirmationController extends Controller
+class ClientOrderController extends Controller
 {
     /**
      * redirect to order confirmation page

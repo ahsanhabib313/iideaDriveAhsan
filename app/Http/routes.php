@@ -18,7 +18,7 @@ Route::get('/clientLogin', [
 ]);
 Route::get('/orderConfirmation', [
 	'as'   => 'orderConfirmation',
-	'uses' => 'OrderConfirmationController@showOrderConfirmation',
+	'uses' => 'ClientOrderController@showOrderConfirmation',
 ]);
 Route::get('/dashboard', [
 	'as'   => 'dashboard',
@@ -49,11 +49,11 @@ Route::get('/addUser', [
 ]);
 Route::get('/manageTills', [
 	'as'   => 'manageTills',
-	'uses' => 'ManageTillsController@manageTills',
+	'uses' => 'TillsController@manageTills',
 ]);
 Route::get('/showTills', [
 	'as'   => 'showTills',
-	'uses' => 'ShowTillsController@showTills',
+	'uses' => 'TillsController@showTills',
 ]);
 Route::post('/addcategory', [
 	'as'   => 'addcategory',

@@ -69,6 +69,34 @@ class UserController extends Controller
     public function modifyUser(Request $request, $userId)
     {
         Log::info('user_id :'  .$userId);
-        return view('admin.modifyUser');
+        $user = User::findOrFail($userId);
+        return view('admin.modifyUser',compact('user'));
+    }
+
+    /**
+     * modify an user.
+     *
+     * @param Request $request
+     *
+     * @return Redirect
+     */
+    public function postModifyUser(Request $request, $userId)
+    {
+        $this->validate($request, [
+            'email'        => 'required|email|unique:users',
+            'password'     => 'required|min:8|confirmed',
+            'Username'   => 'required'
+        ]);
+        Log::info('params are validated');
+        $user = Subscription::scope()->findOrFail($userId);
+        $user_data = $request->only(['email', 'Username', 'first_name', 'last_name']);
+        $user_data['password'] = Hash::make($request->get('password'));
+
+        $user = User::create($user_data);
+        Log::info('Success!');
+
+        session()->flash('message', 'Success!');
+
+        return redirect('/createUser');
     }
 }
