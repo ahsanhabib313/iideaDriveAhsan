@@ -50,9 +50,11 @@ class manageMenuController extends Controller
 
     // show class for read data
     public function showmenu(Request $request){
-        $get_menu = Menu::orderBy('id', 'desc')->get();
+        $menu_list = Menu::orderBy('id', 'desc')->get();
         $total_menu = Menu::count();
-        return view('admin.manageMenu', compact('get_menu', 'total_menu'));
+        // return view('admin.manageMenu', compact('menu_list', 'total_menu'));
+        return view('admin.manageMenu', compact('menu_list', 'total_menu'));
+
 
     }
 }

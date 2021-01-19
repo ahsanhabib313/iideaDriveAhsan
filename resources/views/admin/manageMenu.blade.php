@@ -31,7 +31,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                          @foreach ($get_menu as $item)
+                          @foreach ($menu_list as $item)
                                <tr>
                                 <th scope="row">{{ $loop->index+1 }}</th>                           
                                 <td>{{ $item->id }}</td>
@@ -66,7 +66,7 @@
                             <div class="row">
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                        <form  method="post" action="{{ url('manageMenu') }}" enctype="multipart/form-data">
+                                        <form  method="post" action="{{ url('addmenu') }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
