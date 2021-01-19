@@ -33,6 +33,9 @@
         <a class="navbar-brand brand-logo" href="/dashboard"><img src="{{ asset('/admin_assets/images/iideadrive.png') }}" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
+         <button id="bar-collapse" class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
         <ul class="navbar-nav">
           <li class="nav-item dropdown d-none d-lg-flex">
             <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
@@ -184,6 +187,10 @@
         </button>
       </div>
     </nav>
+
+
+
+    
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <div class="row row-offcanvas row-offcanvas-right">

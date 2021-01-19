@@ -19,7 +19,7 @@
               </div>
             </div>
               <div class="col-lg-12 bg-white p-4">
-                    <table class="table" id="data-table">
+                    <table class="table responsive-table" id="data-table">
                         <thead class="thead bg-theme-color">
                             <tr>
                                 <th scope="col">Order Id</th>

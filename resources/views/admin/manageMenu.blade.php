@@ -31,7 +31,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($menu as $item)
+                          @foreach ($get_menu as $item)
                                <tr>
                                 <th scope="row">{{ $loop->index+1 }}</th>                           
                                 <td>{{ $item->id }}</td>
@@ -75,7 +75,8 @@
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Item Image</label>
-                                                    <input type="file" name="item_image"  class="form-control" >
+                                                    <input type="file" name="item_image"  class="form-control" onchange="previewFile(this)">
+                                                    <img id="previewimage" alt="preview" style="width: 130px; margin-top:20px">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Category</label>
@@ -98,6 +99,18 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    function previewFile(input){
+                        var file = $('input[type=file]').get(0).files[0];
+                        if(file){
+                            var reader = new FileReader();
+                            reader.onload = function(){
+                                $('#previewimage').attr('src', reader.result);
+                            }
+                            reader.readAsDataURL(file);
+                        }
+                    }
+                </script>
             </div>
             {{-- add menu modal --}}
 

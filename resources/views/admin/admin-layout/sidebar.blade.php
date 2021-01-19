@@ -1,6 +1,6 @@
         <!-- partial -->
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <nav class="sidebar sidebar-offcanvas" id="hide-bar">
           <ul class="nav">
             <li class="nav-item nav-profile">
               <div class="nav-link">
@@ -56,4 +56,7 @@
             </li>
           </ul>
         </nav>
+
+
+        
         <!-- partial -->

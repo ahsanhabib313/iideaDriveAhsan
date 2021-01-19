@@ -70,7 +70,12 @@
     width: 150px;
 }
 
-@-moz-keyframes flash {
+.hide-sidebar {
+    display: none;
+}
+
+
+/* @-moz-keyframes flash {
     0% {
         opacity: 1;
     }
@@ -8613,7 +8618,7 @@
         -o-transform: translateX(-100%) rotate(-120deg);
         transform: translateX(-100%) rotate(-120deg);
     }
-}
+} */
 
 
 /*-------------------------------------------------------------------*/
@@ -32407,6 +32412,13 @@ div.tagsinput span.tag a {
 .has-error .radio-inline,
 .has-error .checkbox-inline {
     color: #a94442;
+}
+
+@media only screen and (max-width: 700px) {
+    .table {
+        overflow-x: scroll;
+        display: block;
+    }
 }
 
 

@@ -15,6 +15,9 @@
             ]
 
         });
+        $('#bar-collapse').on('click', function() {
+            $('#hide-bar').toggleClass('hide-sidebar ');
+        });
     });
     const deleteBtn = $('.deleteMenu');
     for (var i = 0; i < deleteBtn.length; i++) {
