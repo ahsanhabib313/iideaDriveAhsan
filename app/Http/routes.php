@@ -42,10 +42,7 @@ Route::get('/orderList', [
 	'as'   => 'orderList',
 	'uses' => 'OrderController@orderList',
 ]);
-Route::get('/manageMenu', [
-	'as'   => 'manageMenu',
-	'uses' => 'ManageMenuController@manageMenu',
-]);
+
 Route::get('/addUser', [
 	'as'   => 'addUser',
 	'uses' => 'AddUserController@addUser',
@@ -82,7 +79,7 @@ Route::post('/addmenu', [
 	'as'   => 'addmenu',
 	'uses' => 'ManageMenuController@insertmenu',
 ]);
-Route::post('/manageMenu', [
+Route::get('/manageMenu', [
 	'as'   => 'manageMenu',
 	'uses' => 'ManageMenuController@showmenu',
 ]);
