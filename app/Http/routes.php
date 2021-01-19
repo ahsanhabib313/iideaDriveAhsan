@@ -77,9 +77,9 @@ Route::post('/updatecategory', [
 ]);
 Route::post('/addmenu', [
 	'as'   => 'addmenu',
-	'uses' => 'ManageMenuController@insertmenu',
+	'uses' => 'MenuController@insertmenu',
 ]);
 Route::get('/manageMenu', [
 	'as'   => 'manageMenu',
-	'uses' => 'ManageMenuController@showmenu',
+	'uses' => 'MenuController@showAdminMenu',
 ]);
