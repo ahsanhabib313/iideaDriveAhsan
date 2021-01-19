@@ -55,6 +55,8 @@ Route::get('/showTills', [
 	'as'   => 'showTills',
 	'uses' => 'TillsController@showTills',
 ]);
+
+// category routes
 Route::post('/addcategory', [
 	'as'   => 'addcategory',
 	'uses' => 'CategoryController@insert',
@@ -75,6 +77,9 @@ Route::post('/updatecategory', [
 	'as'   => 'updatecategory',
 	'uses' => 'CategoryController@newUpdate',
 ]);
+
+
+// menu routes
 Route::post('/addmenu', [
 	'as'   => 'addmenu',
 	'uses' => 'MenuController@insertmenu',
@@ -82,4 +87,16 @@ Route::post('/addmenu', [
 Route::get('/manageMenu', [
 	'as'   => 'manageMenu',
 	'uses' => 'MenuController@showAdminMenu',
+]);
+Route::get('/deletemenu/{id}', [
+	'as'   => 'deletemenu/{id}',
+	'uses' => 'MenuController@deleteMenu',
+]);
+Route::get('/editmenu/{id}', [
+	'as'   => 'editmenu/{id}',
+	'uses' => 'MenuController@editMenu',
+]);
+Route::post('/updatemenu', [
+	'as'   => 'updatemenu',
+	'uses' => 'MenuController@menuUpdate',
 ]);

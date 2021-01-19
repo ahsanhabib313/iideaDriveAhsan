@@ -41,8 +41,8 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
+                                    <a href="{{ url('editmenu') }}/{{ $item->id }}" class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                    <a href="{{ url('deletemenu') }}/{{ $item->id }}" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></a>
                                 </td>
                             </tr>     
                             @endforeach
