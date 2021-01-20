@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="{{ asset('admin_assets/vendors/mdi/css/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ asset('admin_assets/vendors/simple-line-icons/css/simple-line-icons.cs') }}s">
   <link rel="stylesheet" href="{{ asset('admin_assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('admin_assets/vendors/css/vendor.bundle.base.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('admin_assets/vendors/css/vendor.bundle.base.css') }}"> --}}
   <!-- endinject -->
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="{{ asset('admin_assets/vendors/font-awesome/css/font-awesome.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('admin_assets/vendors/jquery-bar-rating/fontawesome-stars.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('admin_assets/vendors/jquery-bar-rating/fontawesome-stars.css') }}"> --}}
   <link rel="stylesheet" href="{{ asset('admin_assets/css/all.min.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css
