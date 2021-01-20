@@ -100,3 +100,8 @@ Route::post('/updatemenu', [
 	'as'   => 'updatemenu',
 	'uses' => 'MenuController@menuUpdate',
 ]);
+
+Route::post('/addUser', [
+	'as'   => 'addUser',
+	'uses' => 'DashboardUsersController@useradd',
+]);

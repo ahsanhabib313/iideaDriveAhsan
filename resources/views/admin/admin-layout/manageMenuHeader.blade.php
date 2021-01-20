@@ -185,6 +185,7 @@
   <script src="{{ asset('admin_assets/') }}/vendors/js/vendor.bundle.base.js"></script>
   <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+  <script src="{{ asset('admin_assets/') }}/js/sweetalert2.all.min.js"></script>
   <!-- Custom js for this page-->
   <script src="{{ asset('admin_assets/') }}/js/dashboard.js"></script>
   <!-- End custom js for this page-->

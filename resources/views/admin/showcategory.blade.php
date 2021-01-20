@@ -45,7 +45,7 @@
                                 <td>{{ $cat->description }}</td>
                                 <td>
                                     <a href="{{ url('editcategory') }}/{{ $cat->id }}" class="btn btn-primary text-white">Edit</a>
-                                    <a href="{{ url('deletecategory') }}/{{ $cat->id }}" class="btn btn-danger text-white">Delete</a>
+                                    <button class="btn btn-danger text-white popup-delete" value="{{ url('deletecategory') }}/{{ $cat->id }}">Delete</button>
                                 </td>
                             </tr>
                             @endforeach
@@ -158,7 +158,7 @@
             </div>
             {{-- add category modal --}}
 
-
+            
 
           <!-- partial:partials/_footer.html -->
           <footer class="footer">

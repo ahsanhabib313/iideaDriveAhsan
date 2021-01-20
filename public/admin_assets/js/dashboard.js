@@ -1,5 +1,38 @@
 (function($) {
     'use strict';
+    $('.popup-delete').click(function() {
+        Swal.fire({
+            title: 'Are you sure you want to delete?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var link_to_go = $(this).val();
+                window.location.href = link_to_go
+                alert(pops);
+            }
+        })
+    })
+
+    $('.menu-del').click(function() {
+        Swal.fire({
+            title: 'Are you sure you want to delete?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var link_to_go = $(this).val();
+                window.location.href = link_to_go
+                alert(pops);
+            }
+        })
+    })
     $(document).ready(function() {
         $('#data-table').DataTable({
             "lengthMenu": [
