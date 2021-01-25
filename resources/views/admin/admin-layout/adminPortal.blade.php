@@ -38,9 +38,9 @@
         </button>
         <ul class="navbar-nav">
           <li class="nav-item dropdown d-none d-lg-flex">
-            <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
+            {{-- <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
               <span class="btn">+ Create new</span>
-            </a>
+            </a> --}}
             <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
               <a class="dropdown-item" href="/createUser">
                 <i class="icon-user text-primary"></i>

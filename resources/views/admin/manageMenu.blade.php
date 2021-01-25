@@ -41,7 +41,7 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="{{ url('editmenu') }}/{{ $item->id }}" class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                    <a href="{{ url('editmenu') }}/{{ $item->id }}" class="modify data-toggle="modal" data-target="#exampleModalMenu""><i class="fas fa-pencil-alt "></i></a>
                                     {{-- <a href="{{ url('deletemenu') }}/{{ $item->id }}" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></a> --}}
                                      <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fas fa-trash "></i></button>
                                 </td>
@@ -152,6 +152,56 @@
                 </div>
             </div>
             {{-- add category modal --}}
+
+             {{-- edit category modal --}}
+            <div class="modal fade" id="exampleModalMenu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title text-white" id="exampleModalLabel">Edit Menu</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-12 bg-white p-4">
+                                    <div class="col-lg-8 offset-md-2">
+                                        <h2 class="mb-4">Edit Menu</h2>
+                                          <form  method="post" action="{{ url('updatemenu') }}">
+                                            @csrf
+                                                <input type="hidden" name="id" value="{{ $data['id'] }}">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="Item Name">Menu Name</label>
+                                                        <input type="text" class="form-control" name="name"  placeholder="name" value="{{ $data['item_name'] }}">
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="Item Category">Menu Category</label>
+                                                        <input type="text" class="form-control" name="category"  placeholder="name" value="{{ $data['item_category'] }}">
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="Item Price">Menu Price</label>
+                                                        <input type="number" class="form-control" name="price"  placeholder="name" value="{{ $data['item_price'] }}">
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="Item Description"> Menu Description </label>
+                                                        <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description">{{ $data['item_description'] }}</textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class='user-info-submit'>
+                                            </form>
+                                        </div>
+                                    </div> 
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- add category modal --}}
+
+
+            
 
           <!-- partial:partials/_footer.html -->
           <footer class="footer">

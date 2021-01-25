@@ -103,5 +103,5 @@ Route::post('/updatemenu', [
 
 Route::post('/addUser', [
 	'as'   => 'addUser',
-	'uses' => 'DashboardUsersController@useradd',
+	'uses' => 'AddUserController@addUser',
 ]);

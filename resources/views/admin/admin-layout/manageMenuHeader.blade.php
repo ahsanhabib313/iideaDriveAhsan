@@ -36,7 +36,7 @@
         <ul class="navbar-nav">
             <div class="popup-btn">
                 <button class="popup" data-toggle="modal" data-target=".bd-example-modal-lg">+ Add Menu</button>
-                <button class="popup ml" data-toggle="modal" data-target="#exampleModal"">+ Add Category</button>
+                <button class="popup ml" data-toggle="modal" data-target="#exampleModal">+ Add Category</button>
             </div>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
