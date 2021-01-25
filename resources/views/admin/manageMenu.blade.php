@@ -41,7 +41,7 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="{{ url('editmenu') }}/{{ $item->id }}" class="modify data-toggle="modal" data-target="#exampleModalMenu""><i class="fas fa-pencil-alt "></i></a>
+                                    <a href="#exampleModalMenu" class="modify" data-toggle="modal" data-target="#exampleModalMenu"><i class="fas fa-pencil-alt "></i></a>
                                     {{-- <a href="{{ url('deletemenu') }}/{{ $item->id }}" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></a> --}}
                                      <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fas fa-trash "></i></button>
                                 </td>
@@ -170,23 +170,23 @@
                                         <h2 class="mb-4">Edit Menu</h2>
                                           <form  method="post" action="{{ url('updatemenu') }}">
                                             @csrf
-                                                <input type="hidden" name="id" value="{{ $data['id'] }}">
+                                                <input type="hidden" name="id" value="">
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Name">Menu Name</label>
-                                                        <input type="text" class="form-control" name="name"  placeholder="name" value="{{ $data['item_name'] }}">
+                                                        <input type="text" class="form-control" name="name"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="category"  placeholder="name" value="{{ $data['item_category'] }}">
+                                                        <input type="text" class="form-control" name="category"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Price">Menu Price</label>
-                                                        <input type="number" class="form-control" name="price"  placeholder="name" value="{{ $data['item_price'] }}">
+                                                        <input type="number" class="form-control" name="price"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Description"> Menu Description </label>
-                                                        <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description">{{ $data['item_description'] }}</textarea>
+                                                        <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description"></textarea>
                                                     </div>
                                                 </div>
                                                 <input type="submit" class='user-info-submit'>
