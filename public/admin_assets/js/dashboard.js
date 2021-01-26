@@ -1,5 +1,14 @@
 (function($) {
     'use strict';
+    $(document).ready(function() {
+        $(".identifyingClass").click(function() {
+            var my_id_value = $(this).data('id');
+            $(".modal-body #name").val(my_id_value);
+            $(".modal-body #category").val(my_id_value);
+            $(".modal-body #price").val(my_id_value);
+            $(".modal-body #description").val(my_id_value);
+        });
+    });
     $('.popup-delete').click(function() {
         Swal.fire({
             title: 'Are you sure you want to delete?',

@@ -41,7 +41,7 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="#exampleModalMenu" class="modify" data-toggle="modal" data-target="#exampleModalMenu"><i class="fas fa-pencil-alt "></i></a>
+                                    <a href="#exampleModalMenu" class="modify" data-toggle="modal" data-target="#exampleModalMenu" class="identifyingClass" data-id="my_id_value"><i class="fas fa-pencil-alt "></i></a>
                                     {{-- <a href="{{ url('deletemenu') }}/{{ $item->id }}" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></a> --}}
                                      <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fas fa-trash "></i></button>
                                 </td>
@@ -72,7 +72,7 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Name">Item Name</label>
-                                                    <input type="text" name="item_name" class="form-control"  placeholder="Name">
+                                                    <input type="text" name="item_name" class="form-control" placeholder="Name" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Item Image</label>
@@ -81,11 +81,11 @@
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Category</label>
-                                                    <input type="text" name="item_category"  class="form-control" >
+                                                    <input type="text" name="item_category" class="form-control">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Price">Item Price</label>
-                                                    <input type="number" name="item_price"  class="form-control" placeholder="Price">
+                                                    <input type="number" name="item_price" class="form-control" placeholder="Price" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Description">Item Description</label>
@@ -174,19 +174,19 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Name">Menu Name</label>
-                                                        <input type="text" class="form-control" name="name"  placeholder="name" value="">
+                                                        <input type="text" class="form-control" name="name" id="name" placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="category"  placeholder="name" value="">
+                                                        <input type="text" class="form-control" name="category" id="category"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Price">Menu Price</label>
-                                                        <input type="number" class="form-control" name="price"  placeholder="name" value="">
+                                                        <input type="number" class="form-control" name="price"  placeholder="name" id="price" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Description"> Menu Description </label>
-                                                        <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description"></textarea>
+                                                        <textarea type="text" class="form-control" name="description" rows="8" id="description"  placeholder="description"></textarea>
                                                     </div>
                                                 </div>
                                                 <input type="submit" class='user-info-submit'>
@@ -218,5 +218,7 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-
+<script>
+    
+</script>
  @endsection
