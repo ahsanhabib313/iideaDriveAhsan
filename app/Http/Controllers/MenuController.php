@@ -79,24 +79,37 @@ class MenuController extends Controller
         return view('client.menu');
     }
 
-    // delete class for deleting data
+    /**
+     * delete a menu by id
+     * @param $id 
+     */
     public function deleteMenu($id){
         $data = Menu::find($id);
         $data->delete();
         return back()->with('success','Category Deleted successfully!');
         // return redirect('showcategory');
     }
+
     public function editMenu($id){
         $data =  Menu::find($id);
         return view('admin.editmenu' , ['data'=>$data]);
-    
     }
+
     public function menuUpdate(Request $request){
+        Log::info('id: '. $request->id);
+        $request->validate([
+            'item_name' => 'required',
+            'item_category' => 'required',
+            'item_price' => 'required',
+            'item_description' => 'required',
+        ]);
+        
         $data =  Menu::find($request->id);
-        $data->item_name = $request->name;
-        $data->item_category = $request->category;
-        $data->item_price = $request->price;
-        $data->item_description = $request->description;
+        
+        $data->item_name = $request->item_name;
+        $data->item_category = $request->item_category;
+        $data->item_price = $request->item_price;
+        $data->item_description = $request->item_description;
         $data->save();
         return redirect('manageMenu')->with('success','Category Updated successfully!');
     }

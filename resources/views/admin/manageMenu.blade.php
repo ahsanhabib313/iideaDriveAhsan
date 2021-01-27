@@ -41,8 +41,11 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="#exampleModalMenu" data-toggle="modal" data-target="#exampleModalMenu" class="modify identifyingClass" data-id="my_id_value"><i class="fas fa-pencil-alt "></i></a>
-                                    {{-- <a href="{{ url('deletemenu') }}/{{ $item->id }}" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></a> --}}
+                                    <a href="#exampleModalMenu" data-toggle="modal" data-target="#exampleModalMenu" 
+                                        class="modify identifyingClass" data-id="{{ $item->id }}" data-name="{{ $item->item_name }}" data-category="{{ $item->item_category }}"
+                                        data-price="{{ $item->item_price }}" data-description="{{ $item->item_description }}">
+                                        <i class="fas fa-pencil-alt "></i>
+                                    </a>
                                      <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fas fa-trash "></i></button>
                                 </td>
                             </tr>     
@@ -170,23 +173,24 @@
                                         <h2 class="mb-4">Edit Menu</h2>
                                           <form  method="post" action="{{ url('updatemenu') }}">
                                             @csrf
-                                                <input type="hidden" name="id" value="">
+                                                
                                                 <div class="form-row">
+                                                     <input type="hidden" name="id" id="id">
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Name">Menu Name</label>
-                                                        <input type="text" class="form-control" name="name" id="name" placeholder="name" value="">
+                                                        <input type="text" class="form-control" name="item_name" id="name" placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="category" id="category"  placeholder="name" value="">
+                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Price">Menu Price</label>
-                                                        <input type="number" class="form-control" name="price"  placeholder="name" id="price" value="">
+                                                        <input type="number" class="form-control" name="item_price"  placeholder="name" id="price" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Description"> Menu Description </label>
-                                                        <textarea type="text" class="form-control" name="description" rows="8" id="description"  placeholder="description"></textarea>
+                                                        <textarea type="text" class="form-control" name="item_description" rows="8" id="description"  placeholder="description"></textarea>
                                                     </div>
                                                 </div>
                                                 <input type="submit" class='user-info-submit'>

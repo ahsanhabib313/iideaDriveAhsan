@@ -3,10 +3,15 @@
     $(document).ready(function() {
         $(".identifyingClass").click(function() {
             var my_id_value = $(this).data('id');
-            $(".modal-body #name").val(my_id_value);
-            $(".modal-body #category").val(my_id_value);
-            $(".modal-body #price").val(my_id_value);
-            $(".modal-body #description").val(my_id_value);
+            $(".modal-body #id").val(my_id_value);
+            var my_name_value = $(this).data('name');
+            $(".modal-body #name").val(my_name_value);
+            var my_category_value = $(this).data('category');
+            $(".modal-body #category").val(my_category_value);
+            var my_price_value = $(this).data('price');
+            $(".modal-body #price").val(my_price_value);
+            var my_description_value = $(this).data('description');
+            $(".modal-body #description").val(my_description_value);
         });
     });
     $('.popup-delete').click(function() {
