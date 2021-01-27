@@ -105,3 +105,7 @@ Route::post('/addUser', [
 	'as'   => 'addUser',
 	'uses' => 'AddUserController@addUser',
 ]);
+Route::post('/addtills', [
+	'as'   => 'addtills',
+	'uses' => 'TillsController@insertTills',
+]);

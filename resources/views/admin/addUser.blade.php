@@ -108,20 +108,20 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Name">First Name</label>
-                                                    <input type="name" class="form-control" name="fname"  placeholder="First Name">
+                                                    <input type="name" class="form-control" name="first_name"  placeholder="First Name">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Image">Last Name</label>
-                                                    <input type="text" class="form-control" placeholder="Last Name" name="lname" >
+                                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Price">Username</label>
-                                                    <input type="text" class="form-control" placeholder="Username" name="uname" >
+                                                    <input type="text" class="form-control" placeholder="Username" name="username" >
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Price">Email</label>
                                                     <input type="email" class="form-control" placeholder="Email"
-                                                    name="e_mail" >
+                                                    name="email" >
                                                 </div>
                                             </div>
                                             <input type="submit" class='user-info-submit'>
