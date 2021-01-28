@@ -107,9 +107,23 @@ class MenuController extends Controller
         $data =  Menu::find($request->id);
         
         $data->item_name = $request->item_name;
+
         $data->item_category = $request->item_category;
         $data->item_price = $request->item_price;
         $data->item_description = $request->item_description;
+        
+        if ($request->hasFile('item_image')) {
+            $path = public_path() . '/' . config('iideadrive.menu_images');
+            Log::info($path);
+            $filename = 'menu_image_' . $data->id . '.' . strtolower($request->file('item_image')->getClientOriginalExtension());
+
+            $file_full_path = $path . '/' . $filename;
+
+            $request->file('item_image')->move($path, $filename);
+
+            \Storage::put(config('iideadrive.menu_images') . '/' . $filename, file_get_contents($file_full_path));
+        }
+        $data->item_image = config('iideadrive.menu_images') . '/' . $filename;
         $data->save();
         return redirect('manageMenu')->with('success','Category Updated successfully!');
     }

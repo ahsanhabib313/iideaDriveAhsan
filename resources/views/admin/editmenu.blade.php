@@ -18,7 +18,7 @@
                                 <li class="breadcrumb-item active" aria-current="page">Edit Menu</li>
                               </ol>
                             </nav>
-                            <form  method="post" action="{{ url('updatemenu') }}">
+                            <form  method="post" action="{{ url('updatemenu') }}" >
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $data['id'] }}">
                                 <div class="form-row">
@@ -27,12 +27,16 @@
                                         <input type="text" class="form-control" name="name"  placeholder="name" value="{{ $data['item_name'] }}">
                                     </div>
                                     <div class="form-group col-md-12">
+                                        <label for="Item Name">Menu Image</label>
+                                        <input type="file" class="form-control" name="image"  placeholder="" value="{{ $data['item_image'] }}">
+                                    </div>
+                                    <div class="form-group col-md-12">
                                         <label for="Item Category">Menu Category</label>
-                                        <input type="text" class="form-control" name="category"  placeholder="name" value="{{ $data['item_category'] }}">
+                                        <input type="text" class="form-control" name="category"  placeholder="" value="{{ $data['item_category'] }}">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="Item Price">Menu Price</label>
-                                        <input type="number" class="form-control" name="price"  placeholder="name" value="{{ $data['item_price'] }}">
+                                        <input type="number" class="form-control" name="price"  placeholder="" value="{{ $data['item_price'] }}">
                                     </div>
                                      <div class="form-group col-md-12">
                                         <label for="Item Description"> Menu Description </label>

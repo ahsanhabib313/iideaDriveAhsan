@@ -171,7 +171,7 @@
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
                                         <h2 class="mb-4">Edit Menu</h2>
-                                          <form  method="post" action="{{ url('updatemenu') }}">
+                                          <form  method="post" action="{{ url('updatemenu') }}" enctype="multipart/form-data">
                                             @csrf
                                                 
                                                 <div class="form-row">
@@ -179,6 +179,10 @@
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Name">Menu Name</label>
                                                         <input type="text" class="form-control" name="item_name" id="name" placeholder="name" value="">
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="Item Image">Menu Image</label>
+                                                        <input type="file" class="form-control" name="item_image" id="name" placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Category">Menu Category</label>
