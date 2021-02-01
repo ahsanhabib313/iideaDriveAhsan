@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class TillsController extends Controller
 {
+    //insert tills in database
     public function insertTills(Request $request){
         $request->validate([
             'name' => 'required',
@@ -27,6 +28,8 @@ class TillsController extends Controller
         ]); 
          return redirect('manageTills')->with('success','Tills Added successfully!');
     }
+
+    //show tills in blade
     public function manageTills(Request $request){
         // show class for read data
         $tills = Tills::orderBy('id', 'desc')->get();
@@ -35,10 +38,32 @@ class TillsController extends Controller
     }
 
 
-    public function showTills(Request $request)
-    {
-        return view('tills.showTills');
+    // edit tills
+    public function editTills( $id)
+    {   $tillData =  Tills::find($id);
+        return view('admin.edittill' , ['tilldata'=>$tillData]);
     }
+
+
+    // updating the tills after editing
+    public function updateTills(Request $request){
+        $data =  Tills::find($request->id);
+        $data->name = $request->name;
+        $data->status = $request->status;
+        $data->save();
+        return redirect('manageTills')->with('success','Category Updated successfully!');
+       
+    }
+
+    // deleting Tills
+    public function deleteTills($id){
+        $data = Tills::find($id);
+        $data->delete();
+        return back()->with('success','Category Deleted successfully!');
+        // return redirect('showcategory');
+    }
+
+
 
 
 }

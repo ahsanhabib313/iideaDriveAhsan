@@ -105,7 +105,21 @@ Route::post('/addUser', [
 	'as'   => 'addUser',
 	'uses' => 'AddUserController@addUser',
 ]);
+
+// tills routes
 Route::post('/addtills', [
 	'as'   => 'addtills',
 	'uses' => 'TillsController@insertTills',
+]);
+Route::get('/edittill/{id}', [
+	'as'   => 'edittill/{id}',
+	'uses' => 'TillsController@editTills',
+]);
+Route::post('/updatetill', [
+	'as'   => 'updatetill',
+	'uses' => 'TillsController@updateTills',
+]);
+Route::get('/deletetill/{id}', [
+	'as'   => 'deletetill/{id}',
+	'uses' => 'TillsController@deleteTills',
 ]);
