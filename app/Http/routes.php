@@ -56,6 +56,12 @@ Route::get('/showTills', [
 	'uses' => 'TillsController@showTills',
 ]);
 
+// dashboard login
+Route::get('/adminlogin', [
+	'as'   => 'adminlogin',
+	'uses' => 'AdminloginController@adminLogin',
+]);
+
 // category routes
 Route::post('/addcategory', [
 	'as'   => 'addcategory',
@@ -122,4 +128,11 @@ Route::post('/updatetill', [
 Route::get('/deletetill/{id}', [
 	'as'   => 'deletetill/{id}',
 	'uses' => 'TillsController@deleteTills',
+]);
+
+// settings routes
+
+Route::get('/settings', [
+	'as'   => 'settings',
+	'uses' => 'settingsController@settings',
 ]);

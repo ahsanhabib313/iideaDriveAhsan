@@ -54,6 +54,12 @@
                 <span class="menu-title">Tills</span>
               </a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/settings">
+                <i class="icon-settings menu-icon"></i>
+                <span class="menu-title">Settings</span>
+              </a>
+            </li>
           </ul>
         </nav>
 

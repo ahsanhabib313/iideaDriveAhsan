@@ -1,6 +1,11 @@
 (function($) {
     'use strict';
     $(document).ready(function() {
+        $('select').niceSelect();
+    });
+
+
+    $(document).ready(function() {
         $(".identifyingClass").click(function() {
             var my_id_value = $(this).data('id');
             $(".modal-body #id").val(my_id_value);
