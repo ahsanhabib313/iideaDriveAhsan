@@ -697,3 +697,33 @@ table.scroll tbody {
 .tills-food-img img {
     width: 100%;
 }
+
+
+/* access page */
+
+.left-half {
+    background: url(../images/food-3.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.btn-group a svg {
+    font-size: 30px;
+}
+
+.btn-group a {
+    padding: 21px 32px;
+    background: #202020;
+    transition: .3s linear all;
+}
+
+.btn-group a:hover {
+    background: #B51A1E;
+    -webkit-box-shadow: 5px 5px 13px 4px rgba(0, 0, 0, 0.26);
+    box-shadow: 5px 5px 13px 4px rgba(0, 0, 0, 0.26);
+}
+
+.btn-group a span {
+    margin-top: 10px;
+    display: block;
+}

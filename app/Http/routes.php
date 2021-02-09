@@ -136,3 +136,9 @@ Route::get('/settings', [
 	'as'   => 'settings',
 	'uses' => 'settingsController@settings',
 ]);
+
+// auth
+Route::get('/access', [
+	'as'   => 'access',
+	'uses' => 'AccessController@access',
+]);
