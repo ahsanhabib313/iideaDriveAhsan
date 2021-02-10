@@ -21,7 +21,7 @@ class AddUserController extends Controller
         //     'username' => $request->username,
         //     'email' => $request->email
         // ]); 
-        //  return redirect('addUser')->with('success','user Added successfully!');
+         return redirect('addUser')->with('success','user Added successfully!');
 
 
          return view('admin.addUser');

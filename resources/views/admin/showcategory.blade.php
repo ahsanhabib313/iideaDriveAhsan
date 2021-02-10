@@ -132,22 +132,29 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
+                                {!!Form::open(array('url' => 'addcategory'))!!}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
                                         <h2 class="mb-4">Add Category</h2>
-                                        <form action="{{ url('addcategory') }}"  method="post">
+                                        <form>
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Name">Category Name</label>
-                                                    <input type="text" class="form-control" name="name"  placeholder="name" value="{{ old('name') }}">
+                                                    {!! Form::label('Item Name', trans("Category name"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('name'))
+                                                        <p class="help-block">{{ $errors->first('name') }}</p>
+                                                    @endif
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Description">Category Description</label>
-                                                    <textarea type="text" class="form-control" name="description" rows="8"  placeholder="description">{{ old('description') }}</textarea>
+                                                    {!! Form::label('Item Description', trans("Category description"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('description', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('description'))
+                                                        <p class="help-block">{{ $errors->first('description') }}</p>
+                                                    @endif
                                                 </div>
                                             </div>
-                                            <input type="submit" class='user-info-submit'>
+                                            {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         </form>
                                     </div>
                                 </div> 

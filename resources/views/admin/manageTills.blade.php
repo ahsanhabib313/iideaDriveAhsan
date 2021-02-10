@@ -84,37 +84,56 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
+                              {!!Form::open(array('url' => 'addtills'))!!}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                         <form class="mb-4" action="{{ url('addtills') }}" method="post">
+                                         <form >
                                           @csrf
                                             <div class="form-row">
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputEmail1">Name</label>
-                                                <input type="name" class="form-control" placeholder="Enter Name" name="name">
+                                                {!! Form::label('Name', trans("Tills Name"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('name'))
+                                                  <p class="help-block">{{ $errors->first('name') }}</p>
+                                                @endif
                                               </div>
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputPassword1">Status</label>
-                                                <input type="text" class="form-control" placeholder="Status" name="status">
+                                                {!! Form::label('Status', trans("Tills Status"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('status', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('status'))
+                                                  <p class="help-block">{{ $errors->first('status') }}</p>
+                                                @endif
                                               </div>
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputPassword1">Till Operator</label>
-                                                <input type="text" class="form-control" placeholder="Till Operator" name="till_operator">
+                                                {!! Form::label('Till Operator', trans("Tills Operators"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('till_operators', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('till_operators'))
+                                                  <p class="help-block">{{ $errors->first('till_operators') }}</p>
+                                                @endif
                                               </div>
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputPassword1">Order In Queue </label>
-                                                <input type="text" class="form-control" placeholder="Order In Queue" name="order_in_queue">
+                                                {!! Form::label('Order In Queue', trans("Order in queue"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('order_in_queue', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('order_in_queue'))
+                                                  <p class="help-block">{{ $errors->first('order_in_queue') }}</p>
+                                                @endif
                                               </div>
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputPassword1">Order Delivered</label>
-                                                <input type="text" class="form-control" placeholder="Order Delivered" name="order_delivered">
+                                                {!! Form::label('Order Delivered', trans("Order delivered"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('order_delivered', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('order_delivered'))
+                                                  <p class="help-block">{{ $errors->first('order_delivered') }}</p>
+                                                @endif
                                               </div>
                                               <div class="form-group col-md-4">
-                                                <label for="exampleInputPassword1">Last Order Delivered</label>
-                                                <input type="text" class="form-control" placeholder="Last Order Delivered" name="last_order_delivered">
+                                                {!! Form::label('Last Order Delivered', trans("last order delivered"), ['class' => 'control-label required']) !!}
+                                                {!! Form::text('last_order_delivered', null, ['class' => 'form-control']) !!}
+                                                @if($errors->has('last_order_delivered'))
+                                                  <p class="help-block">{{ $errors->first('last_order_delivered') }}</p>
+                                                @endif
                                               </div>
                                             </div>
-                                          <button type="submit" class="user-info-submit">Submit</button>
+                                            {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         </form>
                                     </div>
                                 </div> 
