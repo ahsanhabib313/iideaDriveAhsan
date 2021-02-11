@@ -68,34 +68,60 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
+                                {!!Form::open(array('url' => 'createUser'))!!}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                        <form  method="post" action="{{ url('addmenu') }}" enctype="multipart/form-data">
+                                        <form  enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Name">Item Name</label>
-                                                    <input type="text" name="item_name" class="form-control" placeholder="Name" >
+                                                    {!! Form::label('item_name', trans("Item Name"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('item_name', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('item_name'))
+                                                        <p class="help-block">{{ $errors->first('item_name') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Name">Item Name</label>
+                                                    <input type="text" name="item_name" class="form-control"  placeholder="Name"> --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
+                                                     {{-- {!! Form::label('item_image', trans("Item Image"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('item_image', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('item_image'))
+                                                        <p class="help-block">{{ $errors->first('item_image') }}</p>
+                                                    @endif --}}
                                                     <label for="Item Image">Item Image</label>
-                                                    <input type="file" name="item_image"  class="form-control" onchange="previewFile(this)">
-                                                    <img id="previewimage" alt="preview" style="width: 130px; margin-top:20px">
+                                                    <input type="file" name="item_image" class="form-control" onchange="previewFile(this)" >
+                                                     <img id="previewimage" alt="preview" style="width: 130px; margin-top:20px">
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Image">Category</label>
-                                                    <input type="text" name="item_category" class="form-control">
+                                                    {!! Form::label('item_category', trans("Item Category"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('item_category', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('item_category'))
+                                                        <p class="help-block">{{ $errors->first('item_category') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Image">Category</label>
+                                                    <input type="text" name="item_category" class="form-control" > --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Price">Item Price</label>
-                                                    <input type="number" name="item_price" class="form-control" placeholder="Price" >
+                                                    {!! Form::label('item_price', trans("Item Price"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('item_price', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('item_price'))
+                                                        <p class="help-block">{{ $errors->first('item_price') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Price">Item Price</label>
+                                                    <input type="number" name="item_price" class="form-control" placeholder="Price"> --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Description">Item Description</label>
-                                                    <textarea type="text" name="item_description"  class="form-control" rows="8"  placeholder="Description"></textarea>
+                                                    {!! Form::label('item_description', trans("Item Description"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('item_description', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('item_description'))
+                                                        <p class="help-block">{{ $errors->first('item_description') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Description">Item Description</label>
+                                                    <textarea type="text" name="item_description" class="form-control" rows="8"  placeholder="Description"></textarea> --}}
                                                 </div>
                                             </div>
-                                            <input type="submit" class='user-info-submit'>
+                                            {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         </form>
                                     </div>
                                 </div> 
