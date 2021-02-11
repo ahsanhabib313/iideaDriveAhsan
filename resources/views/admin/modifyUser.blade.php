@@ -12,57 +12,57 @@
               <h2 class="mb-4">Update Users</h2>
                <form action="#" method="#">
                     <div class="form-row">
-                            <div class="form-group col-md-4">
-                        <label for="First Name">First Name</label>
-                        <input type="name" class="form-control"  placeholder="First Name">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="Last name">Last Name</label>
-                        <input type="name" class="form-control" placeholder="Last Name">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="Username">Username</label>
-                        <input type="name" class="form-control"  placeholder="Username">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="Email">Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="City">City</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="Zip">Zip</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-md-4 ml-3">
-                        <label for="Role">User Role</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                Admin
-                            </label>
+                        <div class="form-group col-md-4">
+                            <label for="First Name">First Name</label>
+                            <input type="name" class="form-control"  placeholder="First Name">
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                Super Admin
-                            </label>
+                        <div class="form-group col-md-4">
+                            <label for="Last name">Last Name</label>
+                            <input type="name" class="form-control" placeholder="Last Name">
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
-                            <label class="form-check-label" for="gridRadios3">
-                                Moderator
-                            </label>
-                        </div>    
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option2">
-                            <label class="form-check-label" for="gridRadios4">
-                                Editor
-                            </label>
+                        <div class="form-group col-md-4">
+                            <label for="Username">Username</label>
+                            <input type="name" class="form-control"  placeholder="Username">
                         </div>
-                    </div>
+                        <div class="form-group col-md-4">
+                            <label for="Email">Email</label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="City">City</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="Zip">Zip</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4 ml-3">
+                            <label for="Role">User Role</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Admin
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Super Admin
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Moderator
+                                </label>
+                            </div>    
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option2">
+                                <label class="form-check-label" for="gridRadios4">
+                                    Editor
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class='user-info-submit'>Update</button>
                 </form>

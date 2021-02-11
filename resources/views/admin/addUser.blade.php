@@ -101,30 +101,51 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
+                                {!!Form::open(array('url' => 'addUser'))!!}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                        <form action="{{ url('addUser') }}" method="post">
+                                        <form >
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Name">First Name</label>
-                                                    <input type="name" class="form-control" name="first_name"  placeholder="First Name">
+                                                    {!! Form::label('first_name', trans("First Name"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('first_name'))
+                                                        <p class="help-block">{{ $errors->first('first_name') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Name">First Name</label>
+                                                    <input type="name" class="form-control" name="first_name"  placeholder="First Name"> --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Image">Last Name</label>
-                                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name" >
+                                                    {!! Form::label('last_name', trans("Last Name"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('last_name'))
+                                                        <p class="help-block">{{ $errors->first('last_name') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Image">Last Name</label>
+                                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name" > --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Price">Username</label>
-                                                    <input type="text" class="form-control" placeholder="Username" name="username" >
+                                                    {!! Form::label('userame', trans("Userame"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('username', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('username'))
+                                                        <p class="help-block">{{ $errors->first('username') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Price">Username</label>
+                                                    <input type="text" class="form-control" placeholder="Username" name="username" > --}}
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label for="Item Price">Email</label>
+                                                    {!! Form::label('email', trans("Email"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::text('email', null, ['class' => 'form-control']) !!}
+                                                    @if($errors->has('email'))
+                                                        <p class="help-block">{{ $errors->first('email') }}</p>
+                                                    @endif
+                                                    {{-- <label for="Item Price">Email</label>
                                                     <input type="email" class="form-control" placeholder="Email"
-                                                    name="email" >
+                                                    name="email" > --}}
                                                 </div>
                                             </div>
-                                            <input type="submit" class='user-info-submit'>
+                                           {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         </form>
                                     </div>
                                 </div> 
