@@ -43,9 +43,9 @@ Route::get('/orderList', [
 	'uses' => 'OrderController@orderList',
 ]);
 
-Route::get('/addUser', [
-	'as'   => 'addUser',
-	'uses' => 'AddUserController@addUser',
+Route::get('/showUsers', [
+	'as'   => 'showUsers',
+	'uses' => 'UserController@showUsers',
 ]);
 Route::get('/manageTills', [
 	'as'   => 'manageTills',
@@ -109,7 +109,7 @@ Route::post('/updatemenu', [
 
 Route::post('/addUser', [
 	'as'   => 'addUser',
-	'uses' => 'AddUserController@addUser',
+	'uses' => 'UserController@addUser',
 ]);
 
 // tills routes

@@ -99,4 +99,13 @@ class UserController extends Controller
 
         return redirect('/createUser');
     }
+
+    public function showUsers(Request $request)
+    {
+        $profiles = DB::table('profiles')
+        ->get();
+        $users = DB::table('Users')
+        ->get();
+        return view('admin.users',compact('profiles', 'users'));
+    }
 }
