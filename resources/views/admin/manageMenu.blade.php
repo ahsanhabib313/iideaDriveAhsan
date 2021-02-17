@@ -9,12 +9,24 @@
         <div class="content-wrapper">
             <div class="row mt-5 ">
                 <div class="col-lg-12 bg-white p-4">
+                @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">
+                            {{-- <button type="button" class="close" data-dismiss="alert">×</button>     --}}
+                            <strong>{{ $message }}</strong>
+                        </div>
+                    @endif
+                    @if ($errors->all())
+                        <div class="aler alert-danger alert-block p-2 mb-3">
+                            @foreach ($errors->all() as $error)
+                                <li><strong>{{ $error }}</strong></li>
+                            @endforeach
+                        </div>
+                    @endif
                     <div class="row mb-2">
                         <div class="col-lg-6">
                             <h2 class="mb-3">Menus</h2>
                         </div>
                         <div class="col-lg-6">
-
                         </div>
                     </div>
                     <table class="table" id="menu-table">
