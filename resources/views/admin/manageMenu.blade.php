@@ -202,32 +202,32 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-lg-12 bg-white p-4">
-                                    <div class="col-lg-8 offset-md-2">
+                                    <div class="col-lg-12 ">
                                         <h2 class="mb-4">Edit Menu</h2>
                                           <form  method="post" action="{{ url('updatemenu') }}" enctype="multipart/form-data">
                                             @csrf
                                                 
                                                 <div class="form-row">
                                                      <input type="hidden" name="id" id="id">
-                                                    <div class="form-group col-md-12">
+                                                    <div class="form-group col-md-6">
                                                         <label for="Item Name">Menu Name</label>
                                                         <input type="text" class="form-control" name="item_name" id="name" placeholder="name" value="">
                                                     </div>
-                                                    <div class="form-group col-md-12">
+                                                    <div class="form-group col-md-6">
                                                         <label for="Item Image">Menu Image</label>
                                                         <input type="file" class="form-control" name="item_image" id="name" placeholder="name" value="">
                                                     </div>
-                                                    <div class="form-group col-md-12">
+                                                    <div class="form-group col-md-6">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="">
+                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="{{  $item->item_category }}">
                                                     </div>
-                                                    <div class="form-group col-md-12">
+                                                    <div class="form-group col-md-6">
                                                         <label for="Item Price">Menu Price</label>
-                                                        <input type="number" class="form-control" name="item_price"  placeholder="name" id="price" value="">
+                                                        <input type="number" class="form-control" name="item_price"  placeholder="name" id="price" value="{{  $item->item_price }}">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Description"> Menu Description </label>
-                                                        <textarea type="text" class="form-control" name="item_description" rows="8" id="description"  placeholder="description"></textarea>
+                                                        <textarea type="text" class="form-control" name="item_description" rows="8" id="description"  placeholder="description">{{  $item->item_description }}</textarea>
                                                     </div>
                                                 </div>
                                                 <input type="submit" class='user-info-submit'>
