@@ -37,7 +37,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/addUser">
+              <a class="nav-link" href="/showUsers">
                 <i class="icon-people menu-icon"></i>
                 <span class="menu-title">User</span>
               </a>

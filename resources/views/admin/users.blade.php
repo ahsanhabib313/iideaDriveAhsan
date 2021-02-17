@@ -22,66 +22,25 @@
                                 <th scope="col">Last Name</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Profile</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <th scope="row">John</th>
-                                <td>Doe</td>
-                                <td>john123</td>
-                                <td>john@gmail.com</td>
-                                <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <th scope="row">Jane</th>
-                                <td>deby</td>
-                                <td>jane123</td>
-                                <td>jane@gmail.com</td>
-                                <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <th scope="row">Shawn</th>
-                                <td>Murphy</td>
-                                <td>murphy007</td>
-                                <td>murphy@yahoo.com</td>
-                                <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
-                                </td>
-                            </tr>   
-                            <tr>
-                                <th scope="row">4</th>
-                                <th scope="row">Cliif</th>
-                                <td>Burton</td>
-                                <td>cliff66</td>
-                                <td>burton@gmail.com</td>
-                                <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <th scope="row">James</th>
-                                <td>Hetfield</td>
-                                <td>Het81</td>
-                                <td>james@outlook.com</td>
-                                <td>
-                                    <a href="#" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                    <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
-                                </td>
-                            </tr>
-    
+                            @foreach ($users as $user)
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <th scope="row">{{$user->first_name}}</th>
+                                    <td>{{$user->last_name}}</td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->profile_id}}</td>
+                                    <td>
+                                        <a href="{{route('modifyUser', array('userId'=>$user->id))}}" class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                        <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
+                                    </td>
+                                </tr>
+                            @endforeach 
     
                         </tbody>
                     </table>
@@ -101,13 +60,13 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                {!!Form::open(array('url' => 'addUser'))!!}
+                                {!!Form::open(array('url' => 'createUser'))!!}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
                                         <form >
                                             @csrf
                                             <div class="form-row">
-                                                <div class="form-group col-md-12">
+                                                <div class="form-group col-md-4">
                                                     {!! Form::label('first_name', trans("First Name"), ['class' => 'control-label required']) !!}
                                                     {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
                                                     @if($errors->has('first_name'))
@@ -116,7 +75,7 @@
                                                     {{-- <label for="Item Name">First Name</label>
                                                     <input type="name" class="form-control" name="first_name"  placeholder="First Name"> --}}
                                                 </div>
-                                                <div class="form-group col-md-12">
+                                                <div class="form-group col-md-4">
                                                     {!! Form::label('last_name', trans("Last Name"), ['class' => 'control-label required']) !!}
                                                     {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
                                                     @if($errors->has('last_name'))
@@ -125,7 +84,7 @@
                                                     {{-- <label for="Item Image">Last Name</label>
                                                     <input type="text" class="form-control" placeholder="Last Name" name="last_name" > --}}
                                                 </div>
-                                                <div class="form-group col-md-12">
+                                                <div class="form-group col-md-4">
                                                     {!! Form::label('userame', trans("Userame"), ['class' => 'control-label required']) !!}
                                                     {!! Form::text('username', null, ['class' => 'form-control']) !!}
                                                     @if($errors->has('username'))
@@ -134,7 +93,7 @@
                                                     {{-- <label for="Item Price">Username</label>
                                                     <input type="text" class="form-control" placeholder="Username" name="username" > --}}
                                                 </div>
-                                                <div class="form-group col-md-12">
+                                                <div class="form-group col-md-4">
                                                     {!! Form::label('email', trans("Email"), ['class' => 'control-label required']) !!}
                                                     {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                                     @if($errors->has('email'))
@@ -143,6 +102,34 @@
                                                     {{-- <label for="Item Price">Email</label>
                                                     <input type="email" class="form-control" placeholder="Email"
                                                     name="email" > --}}
+                                                </div>
+                                                <div class="form-group col-md-4 {{ ($errors->has('password')) ? 'has-error' : '' }}">
+                                                    {!! Form::label('password', trans("User.password"), ['class' => 'control-label required']) !!}
+                                                    {!! Form::password('password',  ['class' => 'form-control']) !!}
+                                                    @if($errors->has('password'))
+                                                        <p class="help-block">{{ $errors->first('password') }}</p>
+                                                    @endif
+                                                </div>
+                                                <div class="form-group col-md-4 {{ ($errors->has('password_confirmation')) ? 'has-error' : '' }}">
+                                                    {!! Form::label('password_confirmation', 'Password again', ['class' => 'control-label required']) !!}
+                                                    {!! Form::password('password_confirmation',  ['class' => 'form-control']) !!}
+                                                    @if($errors->has('password_confirmation'))
+                                                        <p class="help-block">{{ $errors->first('password_confirmation') }}</p>
+                                                    @endif
+                                                </div>
+                                                <div class="form-group col-md-4 {{ ($errors->has('profile')) ? 'has-error' : '' }}">
+                                                    <label for="Role">User Role</label>
+                                                    @foreach ($profiles as $profile)
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="profile_id" id="profile" value="{{$profile->id}}">
+                                                        <label class="form-check-label" for="profile">
+                                                        {{$profile->description}}
+                                                        </label>
+                                                        @if($errors->has('profile'))
+                                                        <p class="help-block">{{ $errors->first('profile') }}</p>
+                                                        @endif
+                                                    </div>
+                                                    @endforeach 
                                                 </div>
                                             </div>
                                            {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
