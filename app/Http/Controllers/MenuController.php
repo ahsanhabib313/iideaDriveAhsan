@@ -18,13 +18,13 @@ class MenuController extends Controller
             'item_price' => 'required',
             'item_description' => 'required',
         ]);
-        // Menu::insert([
-        //     'item_name' => $request->item_name,
-        //     'item_image' => $request->item_image,
-        //     'item_category' => $request->item_category,
-        //     'item_price' => $request->item_price,
-        //     'item_description' => $request->item_description
-        // ]); 
+        Menu::insert([
+            'item_name' => $request->item_name,
+            'item_image' => $request->item_image,
+            'item_category' => $request->item_category,
+            'item_price' => $request->item_price,
+            'item_description' => $request->item_description
+        ]); 
 
         $item_name = $request->item_name;
 
