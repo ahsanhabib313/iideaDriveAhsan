@@ -43,6 +43,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                        @if(isset($menu_list))
                           @foreach ($menu_list as $item)
                                <tr>
                                 <th scope="row">{{ $loop->index+1 }}</th>                           
@@ -62,6 +63,7 @@
                                 </td>
                             </tr>     
                             @endforeach
+                            @endif
                         </tbody>
                     </table>
                 </div>
@@ -231,7 +233,7 @@
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="{{  $item->item_category }}">
+                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="{{  $menu_list->item_category }}">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Price">Menu Price</label>

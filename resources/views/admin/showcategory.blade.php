@@ -44,7 +44,7 @@
                                 <td>{{Str::title($cat->name) }}</td>
                                 <td>{{ $cat->description }}</td>
                                 <td>
-                                    <a href="{{ url('editcategory') }}/{{ $cat->id }}" class="btn btn-primary text-white">Edit</a>
+                                    <a href="{{ url('editcategory') }}/{{ $cat->id }}" class="btn btn-primary text-white" data-toggle="modal" data-target="#bd-example-modal-lg">Edit</a>
                                     <button class="btn btn-danger text-white popup-delete" value="{{ url('deletecategory') }}/{{ $cat->id }}">Delete</button>
                                 </td>
                             </tr>
@@ -191,7 +191,46 @@
             </div>
             {{-- add category modal --}}
 
-            
+             {{-- edit category modal --}}
+            <div class="modal fade" id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title text-white" id="exampleModalLabel">Edit Category</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form>
+                                @csrf
+                                {{-- <input type="hidden" name="id" value="{{ $data['id'] }}"> --}}
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                      {!! Form::label('Item Name', trans("Category name"), ['class' => 'control-label required']) !!}
+                                      {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                                      @if($errors->has('name'))
+                                          <p class="help-block">{{ $errors->first('name') }}</p>
+                                      @endif
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                      {!! Form::label('Item Description', trans("Category description"), ['class' => 'control-label required']) !!}
+                                      {!! Form::text('description', null, ['class' => 'form-control']) !!}
+                                      @if($errors->has('description'))
+                                          <p class="help-block">{{ $errors->first('description') }}</p>
+                                      @endif
+                                    </div>
+                                </div>
+                                 {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
+                                {{-- <input type="submit" class='user-info-submit'> --}}
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- add category modal --}}
 
           <!-- partial:partials/_footer.html -->
           <footer class="footer">

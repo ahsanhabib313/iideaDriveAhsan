@@ -108,4 +108,11 @@ class UserController extends Controller
         ->get();
         return view('admin.users',compact('profiles', 'users'));
     }
+    public function deleteUser($id){
+        $data = User::find($id);
+        $data->delete();
+        return back()->with('success','User Deleted successfully!');
+        // return redirect('showcategory');
+    }
+
 }

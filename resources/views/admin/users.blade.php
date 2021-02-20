@@ -22,22 +22,22 @@
                                 <th scope="col">Last Name</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Profile</th>
+                                {{-- <th scope="col">Profile</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row">{{ $user->id }}</th>
                                     <th scope="row">{{$user->first_name}}</th>
                                     <td>{{$user->last_name}}</td>
                                     <td>{{$user->username}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{$user->profile_id}}</td>
+                                    {{-- <td>{{$user->profile_id}}</td> --}}
                                     <td>
-                                        <a href="{{route('modifyUser', array('userId'=>$user->id))}}" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                        <button href="#" class="modify d-button deleteMenu" ><i class="fas fa-trash "></i></button>
+                                        <a  data-toggle="modal" data-target="#bd-example-modal-lg"  href="{{route('modifyUser', array('userId'=>$user->id))}}" class="modify"><i class="fas fa-pencil-alt "></i></a>
+                                        <button href="{{ route('deleteUser', array('userId'=>$user->id)) }}" class="modify d-button cat-del" ><i class="fas fa-trash "></i></button>
                                     </td>
                                 </tr>
                             @endforeach 
@@ -136,6 +136,83 @@
                                         </form>
                                     </div>
                                 </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- add user modal --}}
+            {{-- modify user modal --}}
+            <div class="modal fade " id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title text-white" id="exampleModalLongTitle">
+                                Update User
+                            </h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                               <form action="" method="">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="First Name">First Name</label>
+                                            <input type="name" class="form-control"  placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="Last name">Last Name</label>
+                                            <input type="name" class="form-control" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="Username">Username</label>
+                                            <input type="name" class="form-control"  placeholder="Username">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="Email">Email</label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="City">City</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="Zip">Zip</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4 ml-3">
+                                            <label for="Role">User Role</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    Admin
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                <label class="form-check-label" for="gridRadios2">
+                                                    Super Admin
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
+                                                <label class="form-check-label" for="gridRadios3">
+                                                    Moderator
+                                                </label>
+                                            </div>    
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option2">
+                                                <label class="form-check-label" for="gridRadios4">
+                                                    Editor
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class='user-info-submit'>Update</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
