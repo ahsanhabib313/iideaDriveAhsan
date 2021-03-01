@@ -13,18 +13,19 @@ class MenuController extends Controller
     {
         $request->validate([
             'item_name' => 'required|unique:menus',
-            'item_image' => '',
+            'item_image' => 'required',
             'item_category' => 'required',
             'item_price' => 'required',
             'item_description' => 'required',
         ]);
+        /*
         Menu::insert([
             'item_name' => $request->item_name,
             'item_image' => $request->item_image,
             'item_category' => $request->item_category,
             'item_price' => $request->item_price,
             'item_description' => $request->item_description
-        ]); 
+        ]); */
 
         $item_name = $request->item_name;
 
@@ -33,13 +34,9 @@ class MenuController extends Controller
         $item_category = $request->item_category;
         $item_price = $request->item_price;
         $item_description = $request->item_description;
-        $item_image = $request->file('item_image');
-        $image_name = time().'.'.$item_image->extension();
 
         $menus = new Menu();
-
         $menus->item_name = $item_name;
-    
         $menus->item_category = $item_category;
         $menus->item_price = $item_price;
         $menus->item_description = $item_description;

@@ -82,10 +82,11 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                {!!Form::open(array('url' => 'createUser'))!!}
+                                <!--{!!Form::open(array('url' => 'addmenu'))!!}-->
+                                {{Form::open(['route'=> 'addmenu','method'=>'POST' ,'id' => 'add_menu_form', 'files' => true ])}}
                                 <div class="col-lg-12 bg-white p-4">
                                     <div class="col-lg-8 offset-md-2">
-                                        <form  enctype="multipart/form-data">
+            <!--                            <form  enctype="multipart/form-data">-->
                                             @csrf
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
@@ -136,7 +137,7 @@
                                                 </div>
                                             </div>
                                             {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
-                                        </form>
+                                        <!--</form>-->
                                     </div>
                                 </div> 
                             </div>
@@ -203,7 +204,7 @@
             </div>
             {{-- add category modal --}}
 
-             {{-- edit category modal --}}
+             {{-- edit menu modal --}}
             <div class="modal fade" id="exampleModalMenu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -233,15 +234,15 @@
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Category">Menu Category</label>
-                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="{{  $menu_list->item_category }}">
+                                                        <input type="text" class="form-control" name="item_category" id="category"  placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Price">Menu Price</label>
-                                                        <input type="number" class="form-control" name="item_price"  placeholder="name" id="price" value="{{  $item->item_price }}">
+                                                        <input type="number" class="form-control" name="item_price"  placeholder="name" id="price" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="Item Description"> Menu Description </label>
-                                                        <textarea type="text" class="form-control" name="item_description" rows="8" id="description"  placeholder="description">{{  $item->item_description }}</textarea>
+                                                        <textarea type="text" class="form-control" name="item_description" rows="8" id="description"  placeholder="description"></textarea>
                                                     </div>
                                                 </div>
                                                 <input type="submit" class='user-info-submit'>
@@ -254,7 +255,6 @@
                 </div>
             </div>
             {{-- add category modal --}}
-
 
             
 
