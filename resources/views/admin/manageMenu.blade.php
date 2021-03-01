@@ -230,7 +230,7 @@
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Image">Menu Image</label>
-                                                        <input type="file" class="form-control" name="item_image" id="name" placeholder="name" value="">
+                                                        <input type="file" class="form-control" name="item_image" id="image" placeholder="name" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="Item Category">Menu Category</label>
