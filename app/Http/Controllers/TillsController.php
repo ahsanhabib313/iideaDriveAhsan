@@ -47,7 +47,9 @@ class TillsController extends Controller
 
     // updating the tills after editing
     public function updateTills(Request $request){
-        $data =  Tills::find($request->id);
+        $data = Tills::where('id', $request->id)->first();
+
+        // $data =  Tills::find($request->id);
         $data->name = $request->name;
         $data->status = $request->status;
         $data->save();

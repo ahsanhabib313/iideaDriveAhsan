@@ -177,11 +177,11 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Name">Name</label>
-                                                    <input type="text" class="form-control" name="name"  placeholder="name" >
+                                                    <input type="text" class="form-control" name="name"  placeholder="name" value="{{ old('name') }}">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="Item Name">Status</label>
-                                                    <input type="text" class="form-control" name="name"  placeholder="status">
+                                                    <input type="text" class="form-control" name="status"  placeholder="status" value="{{ old('status') }}">
                                                 </div>
                                             </div>
                                             <input type="submit" class='user-info-submit'>

@@ -47,8 +47,8 @@ Route::get('/showUsers', [
 	'as'   => 'showUsers',
 	'uses' => 'UserController@showUsers',
 ]);
-Route::get('/deleteUser', [
-	'as'   => 'deleteUser',
+Route::get('/deleteUser/{id}', [
+	'as'   => 'deleteUser/{id}',
 	'uses' => 'UserController@deleteUser',
 ]);
 Route::get('/manageTills', [

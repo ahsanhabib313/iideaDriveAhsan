@@ -37,7 +37,7 @@
                                     {{-- <td>{{$user->profile_id}}</td> --}}
                                     <td>
                                         <a  data-toggle="modal" data-target="#bd-example-modal-lg"  href="{{route('modifyUser', array('userId'=>$user->id))}}" class="modify"><i class="fas fa-pencil-alt "></i></a>
-                                        <button href="{{ route('deleteUser', array('userId'=>$user->id)) }}" class="modify d-button cat-del" ><i class="fas fa-trash "></i></button>
+                                        <a href="{{ url('deleteUser') }}/{{ $user->id }}" class="modify d-button cat-del" ><i class="fas fa-trash "></i></a>
                                     </td>
                                 </tr>
                             @endforeach 
