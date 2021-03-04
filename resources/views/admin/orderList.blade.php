@@ -30,6 +30,7 @@
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Total</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +43,7 @@
                                 <td>$20</td>
                                 <td>1</td>
                                 <td>$20</td>
+                                <td><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".bd-example-modal-lg">Details</button></td>
                             </tr>
                             <tr>
                                <th scope="row">10102</th>
@@ -52,6 +54,7 @@
                                 <td>$5</td> 
                                 <td>2</td>
                                 <td>$10</td>
+                                <td><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".bd-example-modal-lg">Details</button></td>
                             </tr>
                             <tr>
                               <th scope="row">10103</th>
@@ -62,6 +65,7 @@
                                 <td>$25</td> 
                                 <td>4</td>
                                 <td>$100</td>
+                                <td><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".bd-example-modal-lg">Details</button></td>
                             </tr>
                                   <tr>
                               <th scope="row">10103</th>
@@ -72,6 +76,7 @@
                                 <td>$25</td> 
                                 <td>4</td>
                                 <td>$100</td>
+                                <td><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".bd-example-modal-lg">Details</button></td>
                             </tr>
                                   <tr>
                               <th scope="row">10103</th>
@@ -82,11 +87,74 @@
                                 <td>$25</td> 
                                 <td>4</td>
                                 <td>$100</td>
+                                <td><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".bd-example-modal-lg">Details</button></td>
                             </tr>
                         </tbody>
                     </table>
               </div>
         
+            </div>
+            {{-- order details modal --}}
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title text-white" id="exampleModalLongTitle">
+                        Order Details
+                    </h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="order-metadata">
+                          <h3>Order Id: 10101</h3>
+                          <h6>Date: Dec 15, 2020</h6>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="order-metadata d-flex justify-content-end">
+                          <h3>Customer Name: Mark</h3>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 offset-lg-2">
+                        <table class="table responsive-table mt-3" id="data-table">
+                          <thead class="thead bg-theme-color">
+                              {{-- <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Price</th>
+                              </tr> --}}
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td><h3>Beefy Burger</h3></td>
+                                <td><h6>$20</h6></td>
+                              </tr>
+                              <tr>
+                                <td><h6>Quantity</h6></td>
+                                <td><h6>1</h6></td>
+                              </tr>
+                              <tr>
+                                <td><h6>Total</h6></td>
+                                <td><h6>$20</h6></td>
+                              </tr>
+                              <tr>
+                                <td><h6>Vat</h6></td>
+                                <td><h6>15%</h6></td>
+                              </tr>
+                               <tr>
+                                <td><h6>Grand Total</h6></td>
+                                <td><h6>$23</h6></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
