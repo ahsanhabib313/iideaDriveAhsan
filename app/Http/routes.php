@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CartController;
 
 Route::get('/', [
 	'as'   => 'index',
@@ -8,6 +9,9 @@ Route::get('/cart', [
 	'as'   => 'cart',
 	'uses' => 'CartController@showCart',
 ]);
+
+Route::get('add/cart/{id}',[CartController::class,'addCart'])->name('add.cart');
+
 Route::get('/menu', [
 	'as'   => 'menu',
 	'uses' => 'MenuController@showMenu',

@@ -47,139 +47,31 @@
         <div class="row">
           <div class="col-lg-10">
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-1.jpg" alt="burger">
+                @foreach($menus as $menu)
+                    <div class="col-lg-6 col-md-6 col-sm-6 item-container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="food-img">
+                                    <img src="{{ $menu->item_image }}" alt="burger">
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="food-info">
+                                    <h3>{{$menu->item_name}}</h3>
+                                    <p class="price" id="price">{{$menu->item_price}}</p>
+                                    <p>{{$menu->item_description}}</p>
+                                </div>
+                                <div class="food-cta" id="food-cta">
+                                    <a href="{{route('add.cart', $menu->id)}}"  class=" btn btn-danger food-order-btn" >
+                                        <i class="fas fa-shopping-cart"></i> Add
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>Beefy Burger</h3>
-                      <p class="price" id="price">$20</p>
-                      <p>The best burger in town. Order now for the ultimate experience</p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row ">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-2.jpg" alt="pizza">
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>Pizza Bizz</h3>
-                      <p class="price" id="price">$15</p>
-                      <p>The ultimate pizza to make an evening great</p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                @endforeach
 
-            <div class="row mt-4">
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row ">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-3.jpg" alt="sandwich">
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>Crackled Sandwich</h3>
-                      <p class="price" id="price">$10</p>
-                      <p> Piping Hot sandwiches for the hustlers
-                      </p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row ">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-4.jpg" alt="smoothie">
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>Delish Smooothie</h3>
-                      <p class="price" id="price">$5</p>
-                      <p>Creamy smoothie on the run</p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <div class="row mt-4 margin-bottom">
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row ">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-5.jpg" alt="fries">
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>French Fries</h3>
-                      <p class="price" id="price">$10</p>
-                      <p>Fries for the snacks. Order now for the ultimate experience</p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 item-container">
-                <div class="row ">
-                  <div class="col-lg-7">
-                    <div class="food-img">
-                      <img src="{{ asset('frontend_assets') }}/images/food-6.jpg" alt="chicken">
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="food-info">
-                      <h3>Fried Chicken</h3>
-                      <p class="price" id="price">$25</p>
-                      <p>Spicy fried chicken to make an evening great</p>
-                    </div>
-                    <div class="food-cta" id="food-cta">
-                      <button class="food-order-btn">
-                        <i class="fas fa-shopping-cart"></i> Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="col-lg-2"></div>
@@ -195,62 +87,18 @@
           <div class="col-lg-9 col-md-9 col-sm-9">
             <div class="slider-container">
               <div class="row food-slider">
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-10.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-8.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-9.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-11.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-6.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-12.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-2.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="food-img ">
-                    <a href="cart">
-                      <img src="{{ asset('frontend_assets') }}/images/food-3.jpg" alt="burger" class="no-border-radius">
-                    </a>
-                  </div>
-                </div>
+
+
+                  @foreach($menus as $menu)
+                      <div class="col-lg-12">
+                          <div class="food-img ">
+                              <a href="cart">
+                                  <img src="{{ $menu->item_image }}" alt="burger" class="no-border-radius">
+                              </a>
+                          </div>
+                      </div>
+                  @endforeach
+
               </div>
             </div>
           </div>

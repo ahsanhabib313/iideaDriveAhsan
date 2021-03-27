@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -13,6 +14,8 @@ class IndexController extends Controller
      */
     public function showIndex(Request $request)
     {
-        return view('client.index');
+        $menus = Menu::paginate(15);
+
+        return view('client.index', compact('menus'));
     }
 }

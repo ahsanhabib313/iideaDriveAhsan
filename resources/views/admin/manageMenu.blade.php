@@ -46,7 +46,7 @@
                         @if(isset($menu_list))
                           @foreach ($menu_list as $item)
                                <tr>
-                                <th scope="row">{{ $loop->index+1 }}</th>                           
+                                <th scope="row">{{ $loop->index+1 }}</th>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->item_name }}</td>
                                 <td><img src='{{ asset($item->item_image) }}' alt=""></td>
@@ -54,14 +54,14 @@
                                 <td>{{ $item->item_price}}</td>
                                 <td>{{ $item->item_description }}</td>
                                 <td>
-                                    <a href="#exampleModalMenu" data-toggle="modal" data-target="#exampleModalMenu" 
+                                    <a href="#exampleModalMenu" data-toggle="modal" data-target="#exampleModalMenu"
                                         class="modify identifyingClass" data-id="{{ $item->id }}" data-name="{{ $item->item_name }}" data-category="{{ $item->item_category }}"
                                         data-price="{{ $item->item_price }}" data-description="{{ $item->item_description }}">
-                                        <i class="fas fa-pencil-alt "></i>
+                                        <i class="fa fa-pencil-alt "></i>
                                     </a>
-                                     <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fas fa-trash "></i></button>
+                                     <button class="modify d-button menu-del" value="{{ url('deletemenu') }}/{{ $item->id }}"><i class="fa fa-trash "></i></button>
                                 </td>
-                            </tr>     
+                            </tr>
                             @endforeach
                             @endif
                         </tbody>
@@ -139,7 +139,7 @@
                                             {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         <!--</form>-->
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                                             {!!Form::submit(trans("Submit"), array('class'=>"user-info-submit"))!!}
                                         </form>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                                         <h2 class="mb-4">Edit Menu</h2>
                                           <form  method="post" action="{{ url('updatemenu') }}" enctype="multipart/form-data">
                                             @csrf
-                                                
+
                                                 <div class="form-row">
                                                      <input type="hidden" name="id" id="id">
                                                     <div class="form-group col-md-6">
@@ -248,7 +248,7 @@
                                                 <input type="submit" class='user-info-submit'>
                                             </form>
                                         </div>
-                                    </div> 
+                                    </div>
                              </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
             </div>
             {{-- add category modal --}}
 
-            
+
 
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
@@ -274,6 +274,6 @@
   </div>
   <!-- container-scroller -->
 <script>
-    
+
 </script>
  @endsection

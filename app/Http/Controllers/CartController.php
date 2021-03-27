@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -20,5 +21,11 @@ class CartController extends Controller
     public function showCart(Request $request)
     {
         return view('client.cart');
+    }
+
+    public function addCart($id){
+        /*$menus = Menu::all();
+        $cart = Menu::findOrFail($id);
+        return view('client.menu', compact('cart','menus'));*/
     }
 }

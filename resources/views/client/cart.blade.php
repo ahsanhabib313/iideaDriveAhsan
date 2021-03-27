@@ -40,6 +40,7 @@
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,24 +52,6 @@
                       <input class="change-quantity" type="number" value="1">
                     </td>
                     <td><span class="show-price">$8</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Pizza Bizz</td>
-                     <td><span class="get-price">$10</span></td>
-                    <td class="check-quantity">
-                      <input class="change-quantity" type="number" value="1">
-                    </td>
-                    <td><span class="show-price">$10</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Delish Smoothie</td>
-                     <td><span class="get-price">$12</span></td>
-                    <td class="check-quantity">
-                      <input class="change-quantity" type="number" value="1">
-                    </td>
-                    <td><span class="show-price">$12</span></td>
                   </tr>
                 </tbody>
               </table>
